@@ -1,4 +1,4 @@
-/*	$OpenBSD: grp.h,v 1.3 1997/09/21 10:45:35 niklas Exp $	*/
+/*	$OpenBSD: grp.h,v 1.4 2002/02/16 21:27:17 millert Exp $	*/
 /*	$NetBSD: grp.h,v 1.7 1995/04/29 05:30:40 cgd Exp $	*/
 
 /*-
@@ -54,7 +54,7 @@
 struct group {
 	char	*gr_name;		/* group name */
 	char	*gr_passwd;		/* group password */
-	int	gr_gid;			/* group id */
+	gid_t	gr_gid;			/* group id */
 	char	**gr_mem;		/* group members */
 };
 
