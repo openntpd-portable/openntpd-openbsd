@@ -1,4 +1,10 @@
-/* $OpenBSD$ */
+/* $OpenBSD: stdbool.h,v 1.1 1999/09/24 22:33:10 espie Exp $ */
+
+/*
+ * Written by Marc Espie, September 25, 1999
+ * Public domain.
+ */
+
 #ifndef	_STDBOOL_H_
 #define	_STDBOOL_H_	
 
