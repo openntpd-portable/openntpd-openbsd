@@ -1,3 +1,4 @@
+/*	$OpenBSD: telnet.h,v 1.4 1994/10/26 00:56:46 cgd Exp $	*/
 /*	$NetBSD: telnet.h,v 1.4 1994/10/26 00:56:46 cgd Exp $	*/
 
 /*

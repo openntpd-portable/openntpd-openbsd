@@ -1,3 +1,4 @@
+/*	$OpenBSD: sysexits.h,v 1.4 1994/10/26 00:56:33 cgd Exp $	*/
 /*	$NetBSD: sysexits.h,v 1.4 1994/10/26 00:56:33 cgd Exp $	*/
 
 /*

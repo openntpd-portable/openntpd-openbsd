@@ -1,3 +1,4 @@
+/*	$OpenBSD: err.h,v 1.11 1994/10/26 00:55:52 cgd Exp $	*/
 /*	$NetBSD: err.h,v 1.11 1994/10/26 00:55:52 cgd Exp $	*/
 
 /*-

@@ -1,3 +1,4 @@
+/*	$OpenBSD: rpc_msg.h,v 1.5 1995/04/29 05:28:00 cgd Exp $	*/
 /*	$NetBSD: rpc_msg.h,v 1.5 1995/04/29 05:28:00 cgd Exp $	*/
 
 /*

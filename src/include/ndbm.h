@@ -1,3 +1,4 @@
+/*	$OpenBSD: ndbm.h,v 1.6 1995/07/20 23:31:11 jtc Exp $	*/
 /*	$NetBSD: ndbm.h,v 1.6 1995/07/20 23:31:11 jtc Exp $	*/
 
 /*-

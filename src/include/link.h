@@ -1,3 +1,4 @@
+/*	$OpenBSD: link.h,v 1.10 1996/01/09 00:00:11 pk Exp $	*/
 /*	$NetBSD: link.h,v 1.10 1996/01/09 00:00:11 pk Exp $	*/
 
 /*

@@ -1,3 +1,4 @@
+/*	$OpenBSD: stdlib.h,v 1.25 1995/12/27 21:19:08 jtc Exp $	*/
 /*	$NetBSD: stdlib.h,v 1.25 1995/12/27 21:19:08 jtc Exp $	*/
 
 /*-

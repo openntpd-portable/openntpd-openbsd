@@ -1,3 +1,4 @@
+/*	$OpenBSD: ttyent.h,v 1.5 1994/10/26 00:56:36 cgd Exp $	*/
 /*	$NetBSD: ttyent.h,v 1.5 1994/10/26 00:56:36 cgd Exp $	*/
 
 /*

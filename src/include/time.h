@@ -1,3 +1,4 @@
+/*	$OpenBSD: time.h,v 1.9 1994/10/26 00:56:35 cgd Exp $	*/
 /*	$NetBSD: time.h,v 1.9 1994/10/26 00:56:35 cgd Exp $	*/
 
 /*

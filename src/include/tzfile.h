@@ -1,3 +1,4 @@
+/*	$OpenBSD: tzfile.h,v 1.3 1994/10/26 00:56:37 cgd Exp $	*/
 /*	$NetBSD: tzfile.h,v 1.3 1994/10/26 00:56:37 cgd Exp $	*/
 
 /*

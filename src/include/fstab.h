@@ -1,3 +1,4 @@
+/*	$OpenBSD: fstab.h,v 1.3 1994/10/26 00:55:53 cgd Exp $	*/
 /*	$NetBSD: fstab.h,v 1.3 1994/10/26 00:55:53 cgd Exp $	*/
 
 /*

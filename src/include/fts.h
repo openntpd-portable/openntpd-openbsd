@@ -1,3 +1,4 @@
+/*	$OpenBSD: fts.h,v 1.5 1994/12/28 01:41:50 mycroft Exp $	*/
 /*	$NetBSD: fts.h,v 1.5 1994/12/28 01:41:50 mycroft Exp $	*/
 
 /*

@@ -1,3 +1,4 @@
+/*	$OpenBSD: yp_prot.h,v 1.6 1995/07/14 21:10:58 christos Exp $	*/
 /*	$NetBSD: yp_prot.h,v 1.6 1995/07/14 21:10:58 christos Exp $	*/
 
 /*

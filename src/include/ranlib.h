@@ -1,3 +1,4 @@
+/*	$OpenBSD: ranlib.h,v 1.4 1994/10/26 00:56:14 cgd Exp $	*/
 /*	$NetBSD: ranlib.h,v 1.4 1994/10/26 00:56:14 cgd Exp $	*/
 
 /*-

@@ -1,3 +1,4 @@
+/*	$OpenBSD: ctype.h,v 1.14 1994/10/26 00:55:47 cgd Exp $	*/
 /*	$NetBSD: ctype.h,v 1.14 1994/10/26 00:55:47 cgd Exp $	*/
 
 /*

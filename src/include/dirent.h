@@ -1,3 +1,4 @@
+/*	$OpenBSD: dirent.h,v 1.9 1995/03/26 20:13:37 jtc Exp $	*/
 /*	$NetBSD: dirent.h,v 1.9 1995/03/26 20:13:37 jtc Exp $	*/
 
 /*-

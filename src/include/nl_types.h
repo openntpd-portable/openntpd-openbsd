@@ -1,3 +1,4 @@
+/*	$OpenBSD: nl_types.h,v 1.6 1996/05/13 23:11:15 jtc Exp $	*/
 /*	$NetBSD: nl_types.h,v 1.6 1996/05/13 23:11:15 jtc Exp $	*/
 
 /*-

@@ -1,3 +1,4 @@
+/*	$OpenBSD: grp.h,v 1.7 1995/04/29 05:30:40 cgd Exp $	*/
 /*	$NetBSD: grp.h,v 1.7 1995/04/29 05:30:40 cgd Exp $	*/
 
 /*-

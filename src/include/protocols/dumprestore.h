@@ -1,3 +1,4 @@
+/*	$OpenBSD: dumprestore.h,v 1.6 1994/10/26 00:56:49 cgd Exp $	*/
 /*	$NetBSD: dumprestore.h,v 1.6 1994/10/26 00:56:49 cgd Exp $	*/
 
 /*

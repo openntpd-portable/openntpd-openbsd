@@ -1,3 +1,4 @@
+/*	$OpenBSD: sgtty.h,v 1.4 1995/06/05 19:40:33 pk Exp $	*/
 /*	$NetBSD: sgtty.h,v 1.4 1995/06/05 19:40:33 pk Exp $	*/
 
 /*

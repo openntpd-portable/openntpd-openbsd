@@ -1,3 +1,4 @@
+/*	$OpenBSD: assert.h,v 1.6 1994/10/26 00:55:44 cgd Exp $	*/
 /*	$NetBSD: assert.h,v 1.6 1994/10/26 00:55:44 cgd Exp $	*/
 
 /*-

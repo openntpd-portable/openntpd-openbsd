@@ -1,3 +1,4 @@
+/*	$OpenBSD: locale.h,v 1.6 1994/10/26 00:56:02 cgd Exp $	*/
 /*	$NetBSD: locale.h,v 1.6 1994/10/26 00:56:02 cgd Exp $	*/
 
 /*

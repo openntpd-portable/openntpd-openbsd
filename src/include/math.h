@@ -1,3 +1,4 @@
+/*	$OpenBSD: math.h,v 1.10 1994/10/26 00:56:05 cgd Exp $	*/
 /*	$NetBSD: math.h,v 1.10 1994/10/26 00:56:05 cgd Exp $	*/
 
 /*

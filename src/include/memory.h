@@ -1,3 +1,4 @@
+/*	$OpenBSD: memory.h,v 1.3 1994/10/26 00:56:06 cgd Exp $	*/
 /*	$NetBSD: memory.h,v 1.3 1994/10/26 00:56:06 cgd Exp $	*/
 
 /*

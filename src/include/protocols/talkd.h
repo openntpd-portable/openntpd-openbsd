@@ -1,3 +1,4 @@
+/*	$OpenBSD: talkd.h,v 1.5 1995/03/04 07:59:30 cgd Exp $	*/
 /*	$NetBSD: talkd.h,v 1.5 1995/03/04 07:59:30 cgd Exp $	*/
 
 /*

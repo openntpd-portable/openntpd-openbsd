@@ -1,3 +1,4 @@
+/*	$OpenBSD: kvm.h,v 1.7 1996/04/19 12:02:50 leo Exp $	*/
 /*	$NetBSD: kvm.h,v 1.7 1996/04/19 12:02:50 leo Exp $	*/
 
 /*-

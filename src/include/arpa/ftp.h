@@ -1,3 +1,4 @@
+/*	$OpenBSD: ftp.h,v 1.3 1994/10/26 00:56:43 cgd Exp $	*/
 /*	$NetBSD: ftp.h,v 1.3 1994/10/26 00:56:43 cgd Exp $	*/
 
 /*

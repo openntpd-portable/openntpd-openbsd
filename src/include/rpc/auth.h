@@ -1,3 +1,4 @@
+/*	$OpenBSD: auth.h,v 1.7 1995/04/29 05:27:55 cgd Exp $	*/
 /*	$NetBSD: auth.h,v 1.7 1995/04/29 05:27:55 cgd Exp $	*/
 
 /*

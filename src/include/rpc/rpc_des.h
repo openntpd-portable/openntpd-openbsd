@@ -1,3 +1,5 @@
+/*	$OpenBSD$	*/
+
 /* crypto/des/rpc_des.h */
 /* Copyright (C) 1995-1997 Eric Young (eay@mincom.oz.au)
  * All rights reserved.
