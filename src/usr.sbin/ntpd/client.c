@@ -1,4 +1,4 @@
-/*	$OpenBSD: client.c,v 1.39 2004/10/13 13:19:44 henning Exp $ */
+/*	$OpenBSD: client.c,v 1.40 2004/10/13 13:35:19 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -112,6 +112,8 @@ client_nextaddr(struct ntp_peer *p)
 int
 client_query(struct ntp_peer *p)
 {
+	int	tos = IPTOS_LOWDELAY;
+
 	if (p->addr == NULL && client_nextaddr(p) == -1) {
 		set_next(p, INTERVAL_QUERY_PATHETIC);
 		return (-1);
@@ -131,6 +133,9 @@ client_query(struct ntp_peer *p)
 			} else
 				fatal("client_query connect");
 		}
+		if (setsockopt(p->query->fd, IPPROTO_IP, IP_TOS, &tos,
+		    sizeof(tos)) == -1)
+			log_warn("setsockopt IPTOS_LOWDELAY");
 	}
 
 	/*
