@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.21 2004/09/18 23:21:35 henning Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.22 2004/09/23 01:53:07 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -195,7 +195,7 @@ main(int argc, char *argv[])
 
 	}
 
-	signal(SIGCHLD, SIG_IGN);
+	signal(SIGCHLD, SIG_DFL);
 
 	if (chld_pid)
 		kill(chld_pid, SIGTERM);
