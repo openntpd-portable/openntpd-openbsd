@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.1 2004/06/02 10:08:59 henning Exp $ */
+/*	$OpenBSD: client.c,v 1.1 2004/06/17 19:17:48 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -32,7 +32,7 @@ client_peer_init(struct ntp_peer *p)
 	struct sockaddr_in	*sa_in;
 	struct sockaddr_in6	*sa_in6;
 
-	if ((p->query = calloc(1, sizeof(struct ntp_msg))) == NULL)
+	if ((p->query = calloc(1, sizeof(struct ntp_query))) == NULL)
 		fatal("client_query calloc");
 
 	switch (p->ss.ss_family) {
