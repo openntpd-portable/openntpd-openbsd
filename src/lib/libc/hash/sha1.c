@@ -1,4 +1,4 @@
-/*	$OpenBSD: sha1.c,v 1.6 1997/07/11 04:17:10 millert Exp $	*/
+/*	$OpenBSD: sha1.c,v 1.7 1997/07/12 00:51:18 millert Exp $	*/
 
 /*
  * SHA-1 in C
@@ -50,7 +50,7 @@
  */
 void SHA1Transform(state, buffer)
     u_int32_t state[5];
-    u_char buffer[64];
+    const u_char buffer[64];
 {
     u_int32_t a, b, c, d, e;
     typedef union {
@@ -130,7 +130,7 @@ void SHA1Init(context)
  */
 void SHA1Update(context, data, len)
     SHA1_CTX *context;
-    u_char *data;
+    const u_char *data;
     u_int len;
 {
     u_int i, j;
