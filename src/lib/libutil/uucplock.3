@@ -37,6 +37,8 @@
 .Ft int
 .Fn uu_lock "const char *ttyname"
 .Ft int
+.Fn uu_lock_txfr "const char *ttyname" "pid_t pid"
+.Ft int
 .Fn uu_unlock "const char *ttyname"
 .Ft const char *
 .Fn uu_lockerr "int uu_lockresult"
@@ -60,6 +62,11 @@ If the file does not already exist, or the owning process given by
 the process id found in the lock file is no longer running,
 .Fn uu_lock
 will write its own process id into the file and return success.
+.Pp
+.Fn uu_lock_txfr
+transfers lock ownership to another process.
+.Fn uu_lock
+must have previously been successful.
 .Pp
 .Fn uu_unlock
 removes the lockfile created by
@@ -128,10 +135,24 @@ to be changed between calls to
 .Fn uu_lock
 and
 .Fn uu_lockerr .
+.Pp
+.Fn uu_lock_txfr
+may return any of the following values:
+.Pp
+.Dv UU_LOCK_OK:
+The transfer was successful.  The specified process now holds the device
+lock.
+.Pp
+.Dv UU_LOCK_OWNER_ERR:
+The current process does not already own a lock on the specified device.
+.Pp
+.Dv UU_LOCK_WRITE_ERR:
+The new process id could not be written to the lock file via a call to
+.Xr write 2 .
 .Sh ERRORS
 If
 .Fn uu_lock
-returns one of the four error values above, the global value
+returns one of the error values above, the global value
 .Va errno
 can be used to determine the cause.  Refer to the respective manual pages
 for further details.
