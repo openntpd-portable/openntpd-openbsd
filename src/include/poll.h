@@ -1,6 +1,8 @@
-/*	$OpenBSD: poll.h,v 1.1 1996/05/18 08:53:07 deraadt Exp $ */
+/*	$OpenBSD: poll.h,v 1.2 2000/03/15 03:56:48 todd Exp $ */
 
 /*
+ * Written by Theo de Raadt, Public Domain
+ *
  * Typical poll() implementations expect poll.h to be in /usr/include. 
  * However this is not a convenient place for the real definitions.
  */
