@@ -1,4 +1,4 @@
-/*	$OpenBSD: netdb.h,v 1.10 2000/05/15 10:50:39 itojun Exp $	*/
+/*	$OpenBSD: netdb.h,v 1.11 2000/10/04 22:54:23 espie Exp $	*/
 
 /*
  * ++Copyright++ 1980, 1983, 1988, 1993
@@ -179,7 +179,7 @@ struct addrinfo {
 	int ai_family;		/* protocol family for socket */
 	int ai_socktype;	/* socket type */
 	int ai_protocol;	/* protocol for socket */
-	int ai_addrlen;		/* length of socket-address */
+	socklen_t ai_addrlen;	/* length of socket-address */
 	struct sockaddr *ai_addr; /* socket-address for socket */
 	char *ai_canonname;	/* canonical name for service location (iff req) */
 	struct addrinfo *ai_next; /* pointer to next in list */
