@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.40 2004/10/14 09:35:48 dtucker Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.41 2004/10/22 21:17:37 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -210,7 +210,7 @@ void	 ntp_settime(double);
 void	 ntp_host_dns(char *, u_int32_t);
 
 /* parse.y */
-int	 parse_config(char *, struct ntpd_conf *);
+int	 parse_config(const char *, struct ntpd_conf *);
 
 /* config.c */
 int		 host(const char *, struct ntp_addr **);
