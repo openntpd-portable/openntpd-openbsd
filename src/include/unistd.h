@@ -206,9 +206,6 @@ int	 swapctl(int cmd, const void *arg, int misc);
 int	 symlink(const char *, const char *);
 void	 sync(void);
 int	 syscall(int, ...);
-#if !defined(_XOPEN_SOURCE)
-quad_t	 __syscall(quad_t, ...);
-#endif
 int	 truncate(const char *, off_t);
 int	 ttyslot(void);
 unsigned int	 ualarm(unsigned int, unsigned int);
