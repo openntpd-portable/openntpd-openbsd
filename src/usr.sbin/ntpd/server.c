@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.19 2004/12/08 15:47:38 mickey Exp $ */
+/*	$OpenBSD: server.c,v 1.20 2004/12/22 05:36:11 dtucker Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -112,7 +112,7 @@ server_dispatch(int fd, struct ntpd_conf *conf)
 	if ((size = recvfrom(fd, &buf, sizeof(buf), 0,
 	    (struct sockaddr *)&fsa, &fsa_len)) == -1) {
 		if (errno == EHOSTUNREACH || errno == EHOSTDOWN ||
-		    errno == ENETDOWN) {
+		    errno == ENETUNREACH || errno == ENETDOWN) {
 			log_warn("recvfrom %s",
 			    log_sockaddr((struct sockaddr *)&fsa));
 			return (0);
