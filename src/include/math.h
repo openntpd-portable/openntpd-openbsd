@@ -1,4 +1,4 @@
-/*	$OpenBSD: math.h,v 1.7 2003/06/26 22:27:14 jason Exp $	*/
+/*	$OpenBSD: math.h,v 1.8 2003/06/26 22:40:27 jason Exp $	*/
 /*
  * ====================================================
  * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -22,6 +22,16 @@
  */
 extern char __infinity[];
 #define HUGE_VAL	(*(double *) __infinity)
+
+/* 
+ * C99
+ */
+
+/* XXX just appease the committee for now, needs proper defs... */
+
+typedef float float_t;
+typedef double double_t;
+#define FLT_EVAL_METHOD (-1)
 
 /*
  * XOPEN/SVID
