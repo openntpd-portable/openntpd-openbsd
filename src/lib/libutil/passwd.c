@@ -1,4 +1,4 @@
-/*	$OpenBSD: passwd.c,v 1.38 2003/03/30 21:10:27 deraadt Exp $	*/
+/*	$OpenBSD: passwd.c,v 1.39 2003/04/01 16:28:03 millert Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994, 1995
@@ -34,7 +34,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static const char rcsid[] = "$OpenBSD: passwd.c,v 1.38 2003/03/30 21:10:27 deraadt Exp $";
+static const char rcsid[] = "$OpenBSD: passwd.c,v 1.39 2003/04/01 16:28:03 millert Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/types.h>
@@ -497,7 +497,7 @@ pw_copy(ffd, tfd, pw)
 
 	if (ferror(to))
 err:
-	pw_error(NULL, 0, 1);
+		pw_error(NULL, 0, 1);
 	free(master);
 	(void)fclose(to);
 }
