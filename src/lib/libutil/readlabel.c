@@ -1,4 +1,4 @@
-/*	$OpenBSD: readlabel.c,v 1.4 1997/11/18 19:57:29 millert Exp $	*/
+/*	$OpenBSD: readlabel.c,v 1.5 2001/08/16 18:34:40 millert Exp $	*/
 
 /*
  * Copyright (c) 1996, Jason Downs.  All rights reserved.
@@ -74,9 +74,9 @@ char *readlabelfs(device, verbose)
 		rpath[strlen(rpath) - 1] = 'a' + getrawpartition();
 		break;
 	case S_IFBLK:
-		if (strlen(device) > strlen(_PATH_DEV)) {
+		if (strlen(device) > sizeo(_PATH_DEV) - 1) {
 			snprintf(rpath, sizeof(rpath), "%sr%s", _PATH_DEV,
-			    &device[strlen(_PATH_DEV)]);
+			    &device[sizeof(_PATH_DEV) - 1]);
 
 			/* Change partition name. */
 			part = rpath[strlen(rpath) - 1];
