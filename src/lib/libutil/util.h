@@ -87,6 +87,7 @@ int	login_tty __P((int));
 int	logout __P((const char *));
 void	logwtmp __P((const char *, const char *, const char *));
 int	opendev __P((char *, int, int, char **));
+int	pidfile __P((const char *));
 void	pw_setdir __P((const char *));
 char   *pw_file __P((const char *));
 int	pw_lock __P((int retries));
