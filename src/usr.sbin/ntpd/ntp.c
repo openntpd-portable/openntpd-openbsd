@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.c,v 1.18 2004/07/09 10:22:07 henning Exp $ */
+/*	$OpenBSD: ntp.c,v 1.19 2004/07/09 10:53:33 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -102,6 +102,7 @@ ntp_main(int pipe_prnt[2], struct ntpd_conf *conf)
 	signal(SIGTERM, ntp_sighdlr);
 	signal(SIGINT, ntp_sighdlr);
 	signal(SIGPIPE, SIG_IGN);
+	signal(SIGHUP, SIG_IGN);
 
 	close(pipe_prnt[0]);
 	imsg_init(&ibuf_main, pipe_prnt[1]);
