@@ -1,4 +1,4 @@
-/*	$OpenBSD: client.c,v 1.56 2005/02/03 10:53:33 dtucker Exp $ */
+/*	$OpenBSD: client.c,v 1.57 2005/02/21 17:58:43 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -116,7 +116,7 @@ client_query(struct ntp_peer *p)
 
 	if (p->addr == NULL && client_nextaddr(p) == -1) {
 		set_next(p, error_interval());
-		return (-1);
+		return (0);
 	}
 
 	if (p->query->fd == -1) {
