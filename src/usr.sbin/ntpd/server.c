@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.17 2004/10/15 01:58:04 dtucker Exp $ */
+/*	$OpenBSD: server.c,v 1.18 2004/10/22 21:17:37 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -144,7 +144,7 @@ server_dispatch(int fd, struct ntpd_conf *conf)
 	reply.rootdelay = d_to_sfp(conf->status.rootdelay);
 
 	if (version > 3)
-		reply.refid = reply.xmttime.fraction;
+		reply.refid = reply.xmttime.fractionl;
 	else
 		reply.refid = conf->status.refid;
 
