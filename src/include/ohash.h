@@ -68,8 +68,7 @@ unsigned int ohash_lookup_string(struct ohash *, const char *, u_int32_t);
 unsigned int ohash_lookup_interval(struct ohash *, const char *,
 	    const char *, u_int32_t);
 unsigned int ohash_lookup_memory(struct ohash *, const char *,
-	    size_t, u_int32_t)
-		__attribute__ ((__bounded__(__string__,2,3)));
+	    size_t, u_int32_t);
 void *ohash_find(struct ohash *, unsigned int);
 void *ohash_remove(struct ohash *, unsigned int);
 void *ohash_insert(struct ohash *, unsigned int, void *);

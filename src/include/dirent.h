@@ -103,8 +103,7 @@ void seekdir(DIR *, long);
 int scandir(const char *, struct dirent ***,
     int (*)(struct dirent *), int (*)(const void *, const void *));
 int alphasort(const void *, const void *);
-int getdirentries(int, char *, int, long *)
-		__attribute__ ((__bounded__(__string__,2,3)));
+int getdirentries(int, char *, int, long *);
 #endif /* not POSIX */
 int readdir_r(DIR *, struct dirent *, struct dirent **);
 __END_DECLS

@@ -188,8 +188,7 @@ int	 radixsort(const unsigned char **, int, const unsigned char *,
 int	 sradixsort(const unsigned char **, int, const unsigned char *,
 	    unsigned);
 
-char	*initstate(unsigned int, char *, size_t)
-		__attribute__((__bounded__ (__string__,2,3)));
+char	*initstate(unsigned int, char *, size_t);
 long	 random(void);
 char	*realpath(const char *, char *);
 char	*setstate(const char *);
@@ -219,8 +218,7 @@ void	 srand48(long);
 
 u_int32_t arc4random(void);
 void	arc4random_stir(void);
-void	arc4random_addrandom(unsigned char *, int)
-	__attribute__((__bounded__ (__string__,1,2)));
+void	arc4random_addrandom(unsigned char *, int);
 #endif /* !_ANSI_SOURCE && !_POSIX_SOURCE */
 
 __END_DECLS

@@ -42,8 +42,7 @@ void   MD4Final(unsigned char [16], MD4_CTX *);
 void   MD4Transform(u_int32_t [4], const unsigned char [64]);
 char * MD4End(MD4_CTX *, char *);
 char * MD4File(char *, char *);
-char * MD4Data(const unsigned char *, size_t, char *)
-		__attribute__((__bounded__(__string__,3,2)));
+char * MD4Data(const unsigned char *, size_t, char *);
 __END_DECLS
 
 #endif /* _MD4_H_ */

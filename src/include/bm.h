@@ -51,8 +51,7 @@ typedef struct {
 
 __BEGIN_DECLS
 bm_pat	*bm_comp(u_char const *, size_t, u_char const *);
-u_char	*bm_exec(bm_pat *, u_char *, size_t)
-		__attribute__ ((__bounded__(__string__,2,3)));
+u_char	*bm_exec(bm_pat *, u_char *, size_t);
 void	 bm_free(bm_pat *);
 __END_DECLS
 

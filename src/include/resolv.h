@@ -333,19 +333,13 @@ int		dn_expand(const u_char *, const u_char *, const u_char *,
 		    char *, int);
 int		res_init(void);
 u_int		res_randomid(void);
-int		res_query(const char *, int, int, u_char *, int)
-			__attribute__((__bounded__(__string__,4,5)));
-int		res_search(const char *, int, int, u_char *, int)
-			__attribute__((__bounded__(__string__,4,5)));
+int		res_query(const char *, int, int, u_char *, int);
+int		res_search(const char *, int, int, u_char *, int);
 int		res_querydomain(const char *, const char *, int, int,
-		    u_char *, int)
-			__attribute__((__bounded__(__string__,5,6)));
+		    u_char *, int);
 int		res_mkquery(int, const char *, int, int, const u_char *, int,
-		    const u_char *, u_char *, int)
-			__attribute__((__bounded__(__string__,5,6)))
-			__attribute__((__bounded__(__string__,8,9)));
-int		res_send(const u_char *, int, u_char *, int)
-			__attribute__((__bounded__(__string__,3,4)));
+		    const u_char *, u_char *, int);
+int		res_send(const u_char *, int, u_char *, int);
 int		res_isourserver(const struct sockaddr_in *);
 int		res_nameinquery(const char *, int, int,
 		    const u_char *, const u_char *);

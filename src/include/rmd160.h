@@ -41,8 +41,7 @@ void	 RMD160Update(RMD160_CTX *, const u_char *, u_int32_t);
 void	 RMD160Final(u_char [20], RMD160_CTX *);
 char	*RMD160End(RMD160_CTX *, char *);
 char	*RMD160File(char *, char *);
-char	*RMD160Data(const u_char *, size_t, char *)
-		__attribute__((__bounded__(__string__,3,2)));
+char	*RMD160Data(const u_char *, size_t, char *);
 __END_DECLS
 
 #endif  /* _RMD160_H */

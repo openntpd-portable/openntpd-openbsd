@@ -93,14 +93,11 @@ double difftime(time_t, time_t);
 struct tm *gmtime(const time_t *);
 struct tm *localtime(const time_t *);
 time_t mktime(struct tm *);
-size_t strftime(char *, size_t, const char *, const struct tm *)
-		__attribute__ ((__bounded__(__string__,1,2)));
+size_t strftime(char *, size_t, const char *, const struct tm *);
 char *strptime(const char *, const char *, struct tm *);
 time_t time(time_t *);
-char *asctime_r(const struct tm *, char *)
-		__attribute__ ((__bounded__(__minbytes__,2,26)));
-char *ctime_r(const time_t *, char *)
-		__attribute__ ((__bounded__(__minbytes__,2,26)));
+char *asctime_r(const struct tm *, char *);
+char *ctime_r(const time_t *, char *);
 struct tm *gmtime_r(const time_t *, struct tm *);
 struct tm *localtime_r(const time_t *, struct tm *);
 int nanosleep(const struct timespec *, struct timespec *);

@@ -24,8 +24,7 @@ void SHA1Update(SHA1_CTX *context, const u_char *data, u_int len);
 void SHA1Final(u_char digest[20], SHA1_CTX *context);
 char *SHA1End(SHA1_CTX *, char *);
 char *SHA1File(char *, char *);
-char *SHA1Data(const u_char *, size_t, char *)
-		__attribute__((__bounded__ (__string__,3,2)));
+char *SHA1Data(const u_char *, size_t, char *);
 __END_DECLS
 
 #define SHA1_DIGESTSIZE       20

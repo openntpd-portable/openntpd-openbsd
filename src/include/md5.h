@@ -43,8 +43,7 @@ void   MD5Final(unsigned char [16], MD5_CTX *);
 void   MD5Transform(u_int32_t [4], const unsigned char [64]);
 char * MD5End(MD5_CTX *, char *);
 char * MD5File(char *, char *);
-char * MD5Data(const unsigned char *, size_t, char *)
-		__attribute__ ((__bounded__(__string__,3,2)));
+char * MD5Data(const unsigned char *, size_t, char *);
 __END_DECLS
 
 #endif /* _MD5_H_ */

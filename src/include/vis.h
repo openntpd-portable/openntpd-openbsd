@@ -75,10 +75,8 @@
 __BEGIN_DECLS
 char	*vis(char *, int, int, int);
 int	strvis(char *, const char *, int);
-int	strnvis(char *, const char *, size_t, int)
-		__attribute__ ((__bounded__(__string__,1,3)));
-int	strvisx(char *, const char *, size_t, int)
-		__attribute__ ((__bounded__(__string__,1,3)));
+int	strnvis(char *, const char *, size_t, int);
+int	strvisx(char *, const char *, size_t, int);
 int	strunvis(char *, const char *);
 int	unvis(char *, char, int *, int);
 __END_DECLS
