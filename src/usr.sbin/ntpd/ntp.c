@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.c,v 1.14 2004/07/07 03:57:28 henning Exp $ */
+/*	$OpenBSD: ntp.c,v 1.15 2004/07/07 07:32:05 alexander Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -169,6 +169,8 @@ ntp_main(int pipe_prnt[2], struct ntpd_conf *conf)
 				client_query(p);
 
 			if  (p->deadline > 0 && p->deadline <= time(NULL)) {
+				log_debug("no reply from %s received in time",
+				    log_sockaddr((struct sockaddr *)&p->ss));
 				if (p->trustlevel >= TRUSTLEVEL_BADPEER &&
 				    --p->trustlevel < TRUSTLEVEL_BADPEER)
 					log_info("peer %s now invalid",
