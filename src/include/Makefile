@@ -132,14 +132,16 @@ copies:
 	cd ${DESTDIR}/usr/include && rm -rf ${MACHINE} ${MACHINE_ARCH} machine
 	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m 755 \
 		${DESTDIR}/usr/include/${MACHINE}
-	(cd ../sys/arch/${MACHINE}/include; \
-	 pax -rw -pa *.h ${DESTDIR}/usr/include/${MACHINE})
+	pax -rw -pa -s "|\.\./sys/arch/${MACHINE}/include||" \
+	    ../sys/arch/${MACHINE}/include/*.h \
+	    ${DESTDIR}/usr/include/${MACHINE}
 	if test ${MACHINE} != ${MACHINE_ARCH} -a \
 	    -d ../sys/arch/${MACHINE_ARCH}/include; then \
 		${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m 755 \
     	    	    ${DESTDIR}/usr/include/${MACHINE_ARCH}; \
-		(cd ../sys/arch/${MACHINE_ARCH}/include; \
-		 pax -rw -pa *.h ${DESTDIR}/usr/include/${MACHINE_ARCH}); \
+		pax -rw -pa -s "|\.\./sys/arch/${MACHINE_ARCH}/include||" \
+		    ../sys/arch/${MACHINE_ARCH}/include/*.h \
+		    ${DESTDIR}/usr/include/${MACHINE_ARCH}; \
 	fi
 	ln -sf ${MACHINE} ${DESTDIR}/usr/include/machine; \
 
