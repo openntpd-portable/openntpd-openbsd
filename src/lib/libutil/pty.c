@@ -1,4 +1,4 @@
-/*	$OpenBSD$	*/
+/*	$OpenBSD: pty.c,v 1.3 1996/06/17 07:46:05 downsj Exp $	*/
 /*-
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -79,6 +79,7 @@ openpty(amaster, aslave, name, termp, winp)
 		line[8] = *cp1;
 		for (cp2 = "0123456789abcdef"; *cp2; cp2++) {
 			line[9] = *cp2;
+			line[5] = 'p';
 			if ((master = open(line, O_RDWR, 0)) == -1) {
 				if (errno == ENOENT)
 					return (-1);	/* out of ptys */
@@ -101,7 +102,6 @@ openpty(amaster, aslave, name, termp, winp)
 					return (0);
 				}
 				(void) close(master);
-				line[5] = 'p';
 			}
 		}
 	}
