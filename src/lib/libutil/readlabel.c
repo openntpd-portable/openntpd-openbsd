@@ -1,4 +1,4 @@
-/*	$OpenBSD: readlabel.c,v 1.2 1996/12/04 21:25:33 downsj Exp $	*/
+/*	$OpenBSD: readlabel.c,v 1.3 1996/12/23 07:43:42 downsj Exp $	*/
 
 /*
  * Copyright (c) 1996, Jason Downs.  All rights reserved.
@@ -32,10 +32,12 @@
 #include <fcntl.h>
 #include <paths.h>
 #include <string.h>
+#include <unistd.h>
 #include <util.h>
 #include <sys/dkio.h>
 #define DKTYPENAMES
 #include <sys/disklabel.h>
+#include <sys/ioctl.h>
 #include <sys/param.h>
 #include <sys/stat.h>
 
