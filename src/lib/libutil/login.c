@@ -1,4 +1,4 @@
-/*	$OpenBSD: login.c,v 1.4 1998/07/10 21:40:20 millert Exp $	*/
+/*	$OpenBSD: login.c,v 1.5 1998/07/13 02:11:12 millert Exp $	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -44,6 +44,7 @@ static char *rcsid = "$Id$";
 #include <stdlib.h>
 #include <utmp.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "util.h"
 
