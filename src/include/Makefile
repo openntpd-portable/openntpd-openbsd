@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile,v 1.115 2003/01/20 18:12:52 marc Exp $
+#	$OpenBSD: Makefile,v 1.116 2003/05/09 02:17:18 millert Exp $
 #	$NetBSD: Makefile,v 1.59 1996/05/15 21:36:43 jtc Exp $
 
 #	@(#)Makefile	5.45.1.1 (Berkeley) 5/6/91
@@ -60,10 +60,6 @@ NOOBJ=	noobj
 # Change SYS_INCLUDE in bsd.own.mk to "symlinks" if you don't want copies
 .include <bsd.own.mk>
 SYS_INCLUDE?=	copies
-.if ${KERBEROS:L} == "yes"
-RDIRS+=	../kerberosIV/lib
-PRDIRS+=../kerberosIV/lib/kadm ../kerberosIV/lib/krb
-.endif
 .if ${KERBEROS5:L} == "yes"
 RDIRS+=	../kerberosV/lib
 .endif
