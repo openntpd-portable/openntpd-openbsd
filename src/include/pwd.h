@@ -1,4 +1,4 @@
-/*	$OpenBSD: pwd.h,v 1.15 2003/06/02 19:34:12 millert Exp $	*/
+/*	$OpenBSD: pwd.h,v 1.16 2004/04/06 10:59:18 djm Exp $	*/
 /*	$NetBSD: pwd.h,v 1.9 1996/05/15 21:36:45 jtc Exp $	*/
 
 /*-
@@ -45,7 +45,6 @@
 
 #ifndef _POSIX_SOURCE
 #define	_PATH_PASSWD		"/etc/passwd"
-#define _PATH_PASSWDCONF	"/etc/passwd.conf"
 #define	_PATH_MASTERPASSWD	"/etc/master.passwd"
 #define	_PATH_MASTERPASSWD_LOCK	"/etc/ptmp"
 
