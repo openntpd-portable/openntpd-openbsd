@@ -1,4 +1,4 @@
-/*	$OpenBSD: libgen.h,v 1.2 1997/09/21 10:45:39 niklas Exp $	*/
+/*	$OpenBSD: libgen.h,v 1.3 1998/06/21 22:13:36 millert Exp $	*/
 
 /*
  * Copyright (c) 1997 Todd C. Miller <Todd.Miller@courtesan.com>
@@ -34,8 +34,8 @@
 
 __BEGIN_DECLS
 
-char	*basename __P((char *));
-char	*dirname __P((char *));
+char	*basename __P((const char *));
+char	*dirname __P((const char *));
 #if 0
 char	*regcmp __P((const char *, ...));
 char	*regex __P((const char *, const char *, ...));
