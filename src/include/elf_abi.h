@@ -1,4 +1,4 @@
-/*	$Id$
+/*	$Id$ */
 /*
  * Copyright (c) 1995 Erik Theisen
  * All rights reserved.
