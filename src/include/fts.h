@@ -58,7 +58,8 @@ typedef struct {
 #define	FTS_SEEDOT	0x0020		/* return dot and dot-dot */
 #define	FTS_XDEV	0x0040		/* don't cross devices */
 #define	FTS_WHITEOUT	0x0080		/* return whiteout information */
-#define	FTS_OPTIONMASK	0x00ff		/* valid user option mask */
+#define	FTS_CHDIRROOT	0x0100		/* chdir to root of tree not orig cwd */
+#define	FTS_OPTIONMASK	0x0fff		/* valid user option mask */
 
 #define	FTS_NAMEONLY	0x1000		/* (private) child names only */
 #define	FTS_STOP	0x2000		/* (private) unrecoverable error */
