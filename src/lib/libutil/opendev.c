@@ -1,4 +1,4 @@
-/*	$OpenBSD: opendev.c,v 1.1 1996/06/17 06:35:34 downsj Exp $ */
+/*	$OpenBSD: opendev.c,v 1.2 1996/06/17 07:46:03 downsj Exp $ */
 
 /*
  * Copyright (c) 1996, Jason Downs.  All rights reserved.
@@ -48,7 +48,8 @@ opendev(path, oflags, dflags, realpath)
 	int fd;
 	static char namebuf[256];
 
-	*realpath = path;
+	if (realpath)
+		*realpath = path;
 
 	fd = open(path, oflags);
 	if ((fd < 0) && (errno == ENOENT)) {
@@ -70,7 +71,8 @@ opendev(path, oflags, dflags, realpath)
 				fd = open(namebuf, oflags);
 			}
 
-			*realpath = namebuf;
+			if (realpath)
+				*realpath = namebuf;
 		}
 	}
 	if ((fd < 0) && (errno == ENOENT) && (path[0] != '/')) {
@@ -78,7 +80,8 @@ opendev(path, oflags, dflags, realpath)
 		    _PATH_DEV, path);
 		fd = open(namebuf, oflags);
 
-		*realpath = namebuf;
+		if (realpath)
+			*realpath = namebuf;
 	}
 
 	return (fd);
