@@ -1,4 +1,4 @@
-/*	$OpenBSD: vis.h,v 1.2 1997/09/21 10:46:01 niklas Exp $	*/
+/*	$OpenBSD: vis.h,v 1.3 1999/05/14 20:31:56 aaron Exp $	*/
 /*	$NetBSD: vis.h,v 1.4 1994/10/26 00:56:41 cgd Exp $	*/
 
 /*-
@@ -79,6 +79,7 @@
 __BEGIN_DECLS
 char	*vis __P((char *, int, int, int));
 int	strvis __P((char *, const char *, int));
+int	strnvis __P((char *, const char *, size_t, int));
 int	strvisx __P((char *, const char *, size_t, int));
 int	strunvis __P((char *, const char *));
 int	unvis __P((char *, char, int *, int));
