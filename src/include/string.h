@@ -1,4 +1,4 @@
-/*	$OpenBSD: string.h,v 1.13 2003/08/01 17:38:33 avsm Exp $	*/
+/*	$OpenBSD: string.h,v 1.14 2004/06/20 17:47:07 avsm Exp $	*/
 /*	$NetBSD: string.h,v 1.6 1994/10/26 00:56:30 cgd Exp $	*/
 
 /*-
@@ -101,6 +101,7 @@ void	*memccpy(void *, const void *, int, size_t)
 char	*rindex(const char *, int);
 int	 strcasecmp(const char *, const char *);
 char	*strdup(const char *);
+char	*strcasestr(const char *, const char *);
 size_t	 strlcat(char *, const char *, size_t)
 		__attribute__ ((__bounded__(__string__,1,3)));
 size_t	 strlcpy(char *, const char *, size_t)
