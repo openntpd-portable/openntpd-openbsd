@@ -39,9 +39,9 @@ static const char sccsid[] = "@(#)uucplock.c	8.1 (Berkeley) 6/6/93";
 #endif /* not lint */
 
 #include <sys/types.h>
-#include <sys/file.h>
 #include <dirent.h>
 #include <errno.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include <signal.h>
 #include <stdio.h>
