@@ -1,4 +1,4 @@
-/*	$OpenBSD: opendev.c,v 1.3 1996/06/20 10:46:02 deraadt Exp $ */
+/*	$OpenBSD: opendev.c,v 1.4 1996/07/02 07:57:54 downsj Exp $ */
 
 /*
  * Copyright (c) 1996, Jason Downs.  All rights reserved.
@@ -26,6 +26,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <paths.h>
