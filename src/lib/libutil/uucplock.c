@@ -187,7 +187,13 @@ put_pid(fd, pid)
 	int len;
 
 	len = sprintf (buf, "%10d\n", pid);
-	return write (fd, buf, len) == len && ftruncate(fd, len);
+
+	if (write (fd, buf, len) == len) {
+		/* We don't mind too much if ftruncate() fails - see get_pid */
+		ftruncate(fd, len);
+		return 1;
+	}
+	return 0;
 }
 
 static pid_t
