@@ -1,4 +1,4 @@
-/*	$OpenBSD: pty.c,v 1.5 1996/08/09 00:26:15 deraadt Exp $	*/
+/*	$OpenBSD: pty.c,v 1.6 1999/05/24 21:24:29 deraadt Exp $	*/
 /*-
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -90,10 +90,10 @@ openpty(amaster, aslave, name, termp, winp)
 						strcpy(name, line);
 					if (termp)
 						(void) tcsetattr(slave, 
-							TCSAFLUSH, termp);
+						    TCSAFLUSH, termp);
 					if (winp)
 						(void) ioctl(slave, TIOCSWINSZ, 
-							(char *)winp);
+						    (char *)winp);
 					return (0);
 				}
 				(void) close(master);
