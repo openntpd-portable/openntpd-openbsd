@@ -1,7 +1,7 @@
-#	$OpenBSD: Makefile.inc,v 1.4 1997/07/17 05:37:01 millert Exp $
+#	$OpenBSD: Makefile.inc,v 1.5 1997/07/17 06:02:42 millert Exp $
 
 # hash functions
-.PATH: ${.CURDIR}/hash
+.PATH: ${LIBCSRCDIR}/hash
 
 SRCS+=	sha1.c sha1hl.c rmd160.c rmd160hl.c
 MAN+=	sha1.3 rmd160.3
