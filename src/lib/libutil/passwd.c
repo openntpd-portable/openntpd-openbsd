@@ -1,4 +1,4 @@
-/*	$OpenBSD: passwd.c,v 1.9 1997/04/10 20:05:49 provos Exp $	*/
+/*	$OpenBSD: passwd.c,v 1.10 1997/06/17 10:10:42 niklas Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994, 1995
@@ -34,7 +34,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char rcsid[] = "$OpenBSD: passwd.c,v 1.1.4.1 1996/06/02 19:48:31 ghudson Exp $";
+static char rcsid[] = "$OpenBSD: passwd.c,v 1.10 1997/06/17 10:10:42 niklas Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/types.h>
@@ -252,10 +252,10 @@ pw_lock(retries)
 		return (-1);
 	/* Acquire the lock file. */
 	old_mode = umask(0);
-	fd = open(pw_lck, O_WRONLY|O_CREAT|O_EXCL, 0600);
-	for (i = 0; i < retries && fd < 0 && errno == EEXIST; i++) {
+	fd = open(pw_lck, O_WRONLY|O_CREAT|O_TRUNC|O_NONBLOCK|O_EXLOCK, 0600);
+	for (i = 0; i < retries && fd < 0 && errno == EAGAIN; i++) {
 		sleep(1);
-		fd = open(pw_lck, O_WRONLY|O_CREAT|O_EXCL, 0600);
+		fd = open(pw_lck, O_WRONLY|O_CREAT|O_TRUNC|O_NONBLOCK|O_EXLOCK, 0600);
 	}
 	umask(old_mode);
 	return (fd);
