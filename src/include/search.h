@@ -1,4 +1,4 @@
-/*	$OpenBSD: search.h,v 1.3 1997/09/21 10:45:49 niklas Exp $	*/
+/*	$OpenBSD: search.h,v 1.4 2002/02/16 21:27:17 millert Exp $	*/
 /*	$NetBSD: search.h,v 1.9 1995/08/08 21:14:45 jtc Exp $	*/
 
 /*
@@ -33,26 +33,26 @@ typedef enum {
 } VISIT;
 
 __BEGIN_DECLS
-extern void	*bsearch __P((const void *, const void *, size_t, size_t,
-			      int (*)(const void *, const void *)));
+extern void	*bsearch(const void *, const void *, size_t, size_t,
+		    int (*)(const void *, const void *));
 extern int	 hcreate(unsigned int);
 extern void	 hdestroy(void);
 extern ENTRY	*hsearch(ENTRY, ACTION);
 
-extern void	*lfind __P((const void *, const void *, size_t *, size_t,
-			      int (*)(const void *, const void *)));
-extern void	*lsearch __P((const void *, const void *, size_t *, size_t,
-			      int (*)(const void *, const void *)));
+extern void	*lfind(const void *, const void *, size_t *, size_t,
+		    int (*)(const void *, const void *));
+extern void	*lsearch(const void *, const void *, size_t *, size_t,
+		    int (*)(const void *, const void *));
 extern void	 insque(void *, void *);
 extern void	 remque(void *);
 
-extern void	*tdelete __P((const void *, void **,
-			      int (*)(const void *, const void *)));
-extern void	*tfind __P((const void *, void * const *,
-			      int (*)(const void *, const void *)));
-extern void	*tsearch __P((const void *, void **, 
-			      int (*)(const void *, const void *)));
-extern void      twalk __P((const void *, void (*)(const void *, VISIT, int)));
+extern void	*tdelete(const void *, void **,
+		    int (*)(const void *, const void *));
+extern void	*tfind(const void *, void * const *,
+		    int (*)(const void *, const void *));
+extern void	*tsearch(const void *, void **, 
+		    int (*)(const void *, const void *));
+extern void      twalk(const void *, void (*)(const void *, VISIT, int));
 __END_DECLS
 
 #endif

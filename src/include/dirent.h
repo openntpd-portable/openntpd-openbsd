@@ -1,4 +1,4 @@
-/*	$OpenBSD: dirent.h,v 1.6 1999/09/17 13:13:46 espie Exp $	*/
+/*	$OpenBSD: dirent.h,v 1.7 2002/02/16 21:27:17 millert Exp $	*/
 /*	$NetBSD: dirent.h,v 1.9 1995/03/26 20:13:37 jtc Exp $	*/
 
 /*-
@@ -104,8 +104,8 @@ int closedir(DIR *);
 DIR *__opendir2(const char *, int);
 long telldir(const DIR *);
 void seekdir(DIR *, long);
-int scandir __P((const char *, struct dirent ***,
-    int (*)(struct dirent *), int (*)(const void *, const void *)));
+int scandir(const char *, struct dirent ***,
+    int (*)(struct dirent *), int (*)(const void *, const void *));
 int alphasort(const void *, const void *);
 int getdirentries(int, char *, int, long *);
 #endif /* not POSIX */

@@ -1,4 +1,4 @@
-/*	$OpenBSD: regex.h,v 1.3 1997/09/21 10:45:48 niklas Exp $	*/
+/*	$OpenBSD: regex.h,v 1.4 2002/02/16 21:27:17 millert Exp $	*/
 /*	$NetBSD: regex.h,v 1.4.6.1 1996/06/10 18:57:07 explorer Exp $	*/
 
 /*-
@@ -102,8 +102,7 @@ typedef struct {
 __BEGIN_DECLS
 int	regcomp(regex_t *, const char *, int);
 size_t	regerror(int, const regex_t *, char *, size_t);
-int	regexec __P((const regex_t *,
-	    const char *, size_t, regmatch_t [], int));
+int	regexec(const regex_t *, const char *, size_t, regmatch_t [], int);
 void	regfree(regex_t *);
 __END_DECLS
 
