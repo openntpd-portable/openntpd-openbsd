@@ -1,4 +1,4 @@
-/*	$OpenBSD: assert.h,v 1.8 2002/06/10 19:47:45 espie Exp $	*/
+/*	$OpenBSD: assert.h,v 1.9 2003/06/02 19:34:12 millert Exp $	*/
 /*	$NetBSD: assert.h,v 1.6 1994/10/26 00:55:44 cgd Exp $	*/
 
 /*-
@@ -57,4 +57,5 @@
 
 __BEGIN_DECLS
 void __assert(const char *, int, const char *);
+void __assert2(const char *, int, const char *, const char *);
 __END_DECLS
