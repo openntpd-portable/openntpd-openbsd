@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-#	$OpenBSD: daily,v 1.33 2000/05/26 17:44:33 marc Exp $
+#	$OpenBSD: daily,v 1.33.2.1 2001/09/09 21:45:47 miod Exp $
 #	From: @(#)daily	8.2 (Berkeley) 1/25/94
 #
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin
@@ -151,7 +151,7 @@ if ! grep -q "^Mail queue is empty$" $TMP; then
 fi
 
 if [ -d /var/spool/uucp ]; then
-	uustat -a > $TMP
+	echo uustat -a | su -m uucp > $TMP
 	if [ -s $TMP ]; then
 		echo ""
 		echo "uucp:"
