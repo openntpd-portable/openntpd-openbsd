@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.h,v 1.6 2004/07/04 11:01:49 alexander Exp $ */
+/*	$OpenBSD: ntp.h,v 1.7 2004/07/04 22:24:20 henning Exp $ */
 
 /*
  * Copyright (c) 2004 Henning Brauer <henning@openbsd.org>
@@ -128,7 +128,7 @@ struct ntp_query {
  */
 #define	MODEMASK	(7 << 0)
 #define	VERSIONMASK	(7 << 3)
-#define LIMASK		(2 << 6)
+#define LIMASK		(3 << 6)
 
 /*
  *	Mode values
