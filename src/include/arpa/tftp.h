@@ -1,4 +1,4 @@
-/*	$OpenBSD: tftp.h,v 1.3 1997/09/21 10:46:04 niklas Exp $	*/
+/*	$OpenBSD: tftp.h,v 1.4 2003/06/02 19:34:12 millert Exp $	*/
 /*	$NetBSD: tftp.h,v 1.3 1994/10/26 00:56:48 cgd Exp $	*/
 
 /*
@@ -48,6 +48,7 @@
 #define	DATA	03			/* data packet */
 #define	ACK	04			/* acknowledgement */
 #define	ERROR	05			/* error code */
+#define	OACK	06			/* option acknowledgement */
 
 struct	tftphdr {
 	u_int16_t th_opcode;		/* packet type */
@@ -75,5 +76,6 @@ struct	tftphdr {
 #define	EBADID		5		/* unknown transfer ID */
 #define	EEXISTS		6		/* file already exists */
 #define	ENOUSER		7		/* no such user */
+#define	EOPTNEG		8		/* option negotiation failed */
 
 #endif /* !_TFTP_H_ */
