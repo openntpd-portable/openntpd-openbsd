@@ -1,4 +1,4 @@
-/*	$OpenBSD: passwd.c,v 1.33 2002/05/24 21:27:38 deraadt Exp $	*/
+/*	$OpenBSD: passwd.c,v 1.34 2002/06/09 22:18:43 fgsch Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994, 1995
@@ -34,7 +34,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static const char rcsid[] = "$OpenBSD: passwd.c,v 1.33 2002/05/24 21:27:38 deraadt Exp $";
+static const char rcsid[] = "$OpenBSD: passwd.c,v 1.34 2002/06/09 22:18:43 fgsch Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/types.h>
@@ -483,10 +483,11 @@ pw_copy(ffd, tfd, pw)
 				goto err;
 			continue;
 		}
-		(void)fprintf(to, "%s:%s:%d:%d:%s:%d:%d:%s:%s:%s\n",
-		    pw->pw_name, pw->pw_passwd, pw->pw_uid, pw->pw_gid,
-		    pw->pw_class, pw->pw_change, pw->pw_expire, pw->pw_gecos,
-		    pw->pw_dir, pw->pw_shell);
+		(void)fprintf(to, "%s:%s:%u:%u:%s:%d:%d:%s:%s:%s\n",
+		    pw->pw_name, pw->pw_passwd, (u_int)pw->pw_uid,
+		    (u_int)pw->pw_gid, pw->pw_class, pw->pw_change,
+		    pw->pw_expire, pw->pw_gecos, pw->pw_dir,
+		    pw->pw_shell);
 		done = 1;
 		if (ferror(to))
 			goto err;
