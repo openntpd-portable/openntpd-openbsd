@@ -1,4 +1,4 @@
-/*	$OpenBSD: login.c,v 1.7 2002/06/09 22:18:43 fgsch Exp $	*/
+/*	$OpenBSD: login.c,v 1.8 2003/06/02 20:18:42 millert Exp $	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -45,8 +45,7 @@ static const char rcsid[] = "$Id$";
 #include "util.h"
 
 void
-login(utp)
-	struct utmp *utp;
+login(struct utmp *utp)
 {
 	struct utmp old_ut;
 	register int fd;

@@ -1,4 +1,4 @@
-/*	$OpenBSD: login_tty.c,v 1.4 2002/06/09 22:18:43 fgsch Exp $	*/
+/*	$OpenBSD: login_tty.c,v 1.5 2003/06/02 20:18:42 millert Exp $	*/
 /*-
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -40,8 +40,7 @@ static const char rcsid[] = "$Id$";
 #include "util.h"
 
 int
-login_tty(fd)
-	int fd;
+login_tty(int fd)
 {
 	(void) setsid();
 	if (ioctl(fd, TIOCSCTTY, (char *)NULL) == -1)

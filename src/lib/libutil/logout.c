@@ -1,4 +1,4 @@
-/*	$OpenBSD: logout.c,v 1.5 2002/06/09 22:18:43 fgsch Exp $	*/
+/*	$OpenBSD: logout.c,v 1.6 2003/06/02 20:18:42 millert Exp $	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -47,8 +47,7 @@ static const char rcsid[] = "$Id$";
 typedef struct utmp UTMP;
 
 int
-logout(line)
-	const char *line;
+logout(const char *line)
 {
 	int fd, rval;
 	UTMP ut;
