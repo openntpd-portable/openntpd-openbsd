@@ -1,4 +1,4 @@
-/*	$OpenBSD: stdlib.h,v 1.10 1999/06/11 22:47:48 espie Exp $	*/
+/*	$OpenBSD: stdlib.h,v 1.11 1999/11/27 13:20:25 espie Exp $	*/
 /*	$NetBSD: stdlib.h,v 1.25 1995/12/27 21:19:08 jtc Exp $	*/
 
 /*-
@@ -179,6 +179,7 @@ long	 random __P((void));
 char	*realpath __P((const char *, char *));
 char	*setstate __P((const char *));
 void	 srandom __P((unsigned int));
+void	 srandomdev __P((void));
 
 int	 putenv __P((const char *));
 int	 setenv __P((const char *, const char *, int));
