@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.8 1996/08/25 20:02:43 deraadt Exp $ */
+/*	$OpenBSD: unistd.h,v 1.9 1996/12/09 13:50:04 deraadt Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -150,6 +150,7 @@ int	 revoke __P((const char *));
 int	 rfork __P((int opts));
 int	 rresvport __P((int *));
 int	 ruserok __P((const char *, int, const char *, const char *));
+int	 quotactl __P((const char *, int, int, char *));
 char	*sbrk __P((int));
 int	 select __P((int, fd_set *, fd_set *, fd_set *, struct timeval *));
 int	 setdomainname __P((const char *, int));
