@@ -1,3 +1,4 @@
+.\"	$OpenBSD$
 .\" Copyright (c) 1995
 .\"	The Regents of the University of California.  All rights reserved.
 .\"
@@ -43,7 +44,7 @@
 .Nd tty utility functions
 .Sh SYNOPSIS
 .Fd #include <util.h>
-.Ft void
+.Ft int
 .Fn openpty "int *amaster" "int *aslave" "char *name" "struct termios *termp" "struct winsize *winp"
 .Ft int
 .Fn login_tty "int fd"
