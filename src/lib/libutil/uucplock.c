@@ -211,7 +211,7 @@ put_pid(fd, pid)
 	char buf[32];
 	int len;
 
-	len = sprintf (buf, "%10d\n", pid);
+	len = sprintf (buf, "%10d\n", (int)pid);
 
 	if (write (fd, buf, len) == len) {
 		/* We don't mind too much if ftruncate() fails - see get_pid */
