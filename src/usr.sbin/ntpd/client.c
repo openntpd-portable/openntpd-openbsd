@@ -1,4 +1,4 @@
-/*	$OpenBSD: client.c,v 1.12 2004/07/07 01:01:27 henning Exp $ */
+/*	$OpenBSD: client.c,v 1.13 2004/07/07 06:50:40 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -116,7 +116,7 @@ client_dispatch(struct ntp_peer *p)
 	    msg.orgtime.fraction != p->query->msg.xmttime.fraction)
 		return (0);
 
-	/* 
+	/*
 	 * From RFC 2030:
 	 *
 	 *      Timestamp Name          ID   When Generated
