@@ -1,4 +1,4 @@
-/*	$OpenBSD$	*/
+/*	$OpenBSD: login.c,v 1.3 1996/06/17 07:46:02 downsj Exp $	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -48,20 +48,33 @@ static char *rcsid = "$Id$";
 #include "util.h"
 
 void
-login(ut)
-	struct utmp *ut;
+login(utp)
+	struct utmp *utp;
 {
+	struct utmp old_ut;
 	register int fd;
 	int tty;
 
 	tty = ttyslot();
-	if (tty > 0 && (fd = open(_PATH_UTMP, O_WRONLY|O_CREAT, 0644)) >= 0) {
+	if (tty > 0 && (fd = open(_PATH_UTMP, O_RDWR|O_CREAT, 0644)) >= 0) {
 		(void)lseek(fd, (off_t)(tty * sizeof(struct utmp)), L_SET);
-		(void)write(fd, ut, sizeof(struct utmp));
+		/*
+		 * Prevent luser from zero'ing out ut_host.
+		 * If the new ut_line is empty but the old one is not
+		 * and ut_line and ut_name match, preserve the old ut_line.
+		 */
+		if (read(fd, &old_ut, sizeof(struct utmp)) ==
+		    sizeof(struct utmp) && utp->ut_host[0] == '\0' &&
+		    old_ut.ut_host[0] != '\0' &&
+		    strncmp(old_ut.ut_line, utp->ut_line, UT_LINESIZE) == 0 &&
+		    strncmp(old_ut.ut_name, utp->ut_name, UT_NAMESIZE) == 0)
+			(void)memcpy(utp->ut_host, old_ut.ut_host, UT_HOSTSIZE);
+		(void)lseek(fd, (off_t)(tty * sizeof(struct utmp)), L_SET);
+		(void)write(fd, utp, sizeof(struct utmp));
 		(void)close(fd);
 	}
 	if ((fd = open(_PATH_WTMP, O_WRONLY|O_APPEND, 0)) >= 0) {
-		(void)write(fd, ut, sizeof(struct utmp));
+		(void)write(fd, utp, sizeof(struct utmp));
 		(void)close(fd);
 	}
 }
