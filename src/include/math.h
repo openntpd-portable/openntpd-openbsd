@@ -1,3 +1,4 @@
+/*	$OpenBSD$	*/
 /*
  * ====================================================
  * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -11,7 +12,6 @@
 
 /*
  * from: @(#)fdlibm.h 5.1 93/09/24
- * $Id$
  */
 
 #ifndef _MATH_H_
