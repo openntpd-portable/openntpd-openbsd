@@ -1,4 +1,4 @@
-/*	$OpenBSD: client.c,v 1.26 2004/07/18 12:59:41 henning Exp $ */
+/*	$OpenBSD: client.c,v 1.27 2004/07/18 13:26:53 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -74,7 +74,7 @@ client_nextaddr(struct ntp_peer *p)
 	close(p->query->fd);
 
 	if ((p->addr = p->addr->next) == NULL)
-		p->addr = p->addr_head;
+		p->addr = p->addr_head.a;
 
 	if ((p->query->fd = socket(p->addr->ss.ss_family, SOCK_DGRAM, 0)) == -1)
 		fatal("client_query socket");
