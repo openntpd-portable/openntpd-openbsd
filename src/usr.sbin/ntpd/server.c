@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.3 2004/06/29 18:34:00 alexander Exp $ */
+/*	$OpenBSD: server.c,v 1.4 2004/07/04 18:07:15 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -36,7 +36,7 @@ setup_listeners(struct servent *se, struct ntpd_conf *conf, u_int *cnt)
 	struct sockaddr		*sap;
 	u_int			 new_cnt = 0;
 
-	if (TAILQ_EMPTY(&conf->listen_addrs)) {
+	if (conf->listen_all) {
 		if (getifaddrs(&ifap) == -1)
 			fatal("getifaddrs");
 
