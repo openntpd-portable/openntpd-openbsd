@@ -1,3 +1,4 @@
+/*	$OpenBSD$	*/
 /*-
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -47,7 +48,8 @@ static char *rcsid = "$Id$";
 #include <stdio.h>
 #include <string.h>
 #include <grp.h>
-#include <util.h>
+
+#include "util.h"
 
 #ifdef i386
 /* PCVT conflicts with ttyv*. */

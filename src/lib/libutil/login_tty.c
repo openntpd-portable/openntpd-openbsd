@@ -1,3 +1,4 @@
+/*	$OpenBSD$	*/
 /*-
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -39,7 +40,8 @@ static char *rcsid = "$Id$";
 #include <sys/param.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
-#include <util.h>
+
+#include "util.h"
 
 int
 login_tty(fd)

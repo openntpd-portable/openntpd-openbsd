@@ -1,3 +1,4 @@
+/*	$OpenBSD$	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -43,7 +44,8 @@ static char *rcsid = "$Id$";
 #include <stdlib.h>
 #include <utmp.h>
 #include <stdio.h>
-#include <util.h>
+
+#include "util.h"
 
 void
 login(ut)

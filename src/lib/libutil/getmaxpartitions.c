@@ -1,3 +1,4 @@
+/*	$OpenBSD$	*/
 /*	$NetBSD: getmaxpartitions.c,v 1.1 1996/05/16 07:03:31 thorpej Exp $	*/
 
 /*-
@@ -42,7 +43,8 @@ static char rcsid[] = "$NetBSD: getmaxpartitions.c,v 1.1 1996/05/16 07:03:31 tho
 
 #include <sys/param.h>
 #include <sys/sysctl.h>
-#include <util.h>
+
+#include "util.h"
 
 int
 getmaxpartitions()

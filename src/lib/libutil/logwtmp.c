@@ -1,3 +1,4 @@
+/*	$OpenBSD$	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -44,7 +45,8 @@ static char *rcsid = "$Id$";
 #include <string.h>
 #include <unistd.h>
 #include <utmp.h>
-#include <util.h>
+
+#include "util.h"
 
 void
 logwtmp(line, name, host)
