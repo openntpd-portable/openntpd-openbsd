@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.c,v 1.16 2004/07/08 01:21:09 henning Exp $ */
+/*	$OpenBSD: ntp.c,v 1.17 2004/07/08 15:06:13 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -168,7 +168,9 @@ ntp_main(int pipe_prnt[2], struct ntpd_conf *conf)
 			if (p->next > 0 && p->next <= time(NULL))
 				client_query(p);
 
-			if  (p->deadline > 0 && p->deadline <= time(NULL)) {
+			if (p->deadline > 0 && p->deadline < nextaction)
+				nextaction = p->deadline;
+			if (p->deadline > 0 && p->deadline <= time(NULL)) {
 				log_debug("no reply from %s received in time",
 				    log_sockaddr((struct sockaddr *)&p->ss));
 				if (p->trustlevel >= TRUSTLEVEL_BADPEER &&
