@@ -1,4 +1,4 @@
-/*	$OpenBSD: util.h,v 1.11 2000/11/26 01:25:33 millert Exp $	*/
+/*	$OpenBSD: util.h,v 1.12 2000/11/26 01:27:19 millert Exp $	*/
 /*	$NetBSD: util.h,v 1.2 1996/05/16 07:00:22 thorpej Exp $	*/
 
 /*-
@@ -82,7 +82,9 @@ void	pw_getconf __P((char *, size_t, const char *, const char *));
 int	pw_scan __P((char *, struct passwd *, int *));
 void	pw_error __P((const char *, int, int));
 int	openpty __P((int *, int *, char *, struct termios *,
-		     struct winsize *));
+	    struct winsize *));
+int	opendisk __P((const char *path, int flags, char *buf, size_t buflen,
+	    int iscooked));
 pid_t	forkpty __P((int *, char *, struct termios *, struct winsize *));
 int	getmaxpartitions __P((void));
 int	getrawpartition __P((void));
