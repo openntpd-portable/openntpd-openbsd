@@ -1,4 +1,4 @@
-/*	$OpenBSD$	*/
+/*	$OpenBSD: getrawpartition.c,v 1.2 1996/06/17 07:46:02 downsj Exp $	*/
 /*	$NetBSD: getrawpartition.c,v 1.1 1996/05/16 07:03:33 thorpej Exp $	*/
 
 /*-
@@ -38,7 +38,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char rcsid[] = "$NetBSD: getrawpartition.c,v 1.1 1996/05/16 07:03:33 thorpej Exp $";
+static const char rcsid[] = "$NetBSD: getrawpartition.c,v 1.1 1996/05/16 07:03:33 thorpej Exp $";
 #endif
 
 #include <sys/param.h>
@@ -50,7 +50,7 @@ int
 getrawpartition()
 {
 	int rawpart, mib[2];
-	size_t varlen; 
+	size_t varlen;
 
 	mib[0] = CTL_KERN;
 	mib[1] = KERN_RAWPARTITION;

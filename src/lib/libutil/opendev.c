@@ -1,4 +1,4 @@
-/*	$OpenBSD: opendev.c,v 1.5 1996/09/16 02:40:51 tholo Exp $ */
+/*	$OpenBSD: opendev.c,v 1.6 2000/04/30 17:37:46 millert Exp $	*/
 
 /*
  * Copyright (c) 2000, Todd C. Miller.  All rights reserved.

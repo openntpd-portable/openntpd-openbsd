@@ -1,4 +1,4 @@
-/* * $OpenBSD: uucplock.c,v 1.8 2002/02/16 21:27:29 millert Exp $*/
+/*	$OpenBSD: uucplock.c,v 1.9 2002/05/26 09:29:02 deraadt Exp $	*/
 /*
  * Copyright (c) 1988, 1993
  *	The Regents of the University of California.  All rights reserved.

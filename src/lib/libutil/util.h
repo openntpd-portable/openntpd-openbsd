@@ -1,4 +1,4 @@
-/*	$OpenBSD: util.h,v 1.19 2002/02/16 21:27:29 millert Exp $	*/
+/*	$OpenBSD: util.h,v 1.20 2002/02/17 19:42:26 millert Exp $	*/
 /*	$NetBSD: util.h,v 1.2 1996/05/16 07:00:22 thorpej Exp $	*/
 
 /*-
@@ -111,7 +111,7 @@ void	login_fbtab(char *, uid_t, gid_t);
 int	login_check_expire(struct __sFILE *, struct passwd *, char *, int);
 char   *readlabelfs(char *, int);
 const char *uu_lockerr(int _uu_lockresult);
-int     uu_lock(const char *_ttyname); 
+int     uu_lock(const char *_ttyname);
 int	uu_lock_txfr(const char *_ttyname, pid_t _pid);
 int     uu_unlock(const char *_ttyname);
 __END_DECLS

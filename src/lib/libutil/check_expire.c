@@ -1,4 +1,4 @@
-/*	$OpenBSD: check_expire.c,v 1.4 2002/02/16 21:27:29 millert Exp $	*/
+/*	$OpenBSD: check_expire.c,v 1.5 2002/02/19 19:06:05 mpech Exp $	*/
 
 /*
  * Copyright (c) 1997 Berkeley Software Design, Inc. All rights reserved.
@@ -88,7 +88,7 @@ login_check_expire(back, pwd, class, lastchance)
 			warn = 0;
 		} else {
 			dead = login_getcaptime(lc, "password-dead", 0, 0);
-			warn = login_getcaptime(lc, "password-warn", 
+			warn = login_getcaptime(lc, "password-warn",
 			    2 * DAYSPERWEEK * SECSPERDAY,
 			    2 * DAYSPERWEEK * SECSPERDAY);
 			if (dead < 0) {

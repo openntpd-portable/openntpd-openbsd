@@ -1,4 +1,4 @@
-/*	$OpenBSD: fparseln.c,v 1.2 2001/08/16 18:34:40 millert Exp $
+/*	$OpenBSD: fparseln.c,v 1.3 2002/02/16 21:27:29 millert Exp $	*/
 /*	$NetBSD: fparseln.c,v 1.7 1999/07/02 15:49:12 simonb Exp $	*/
 
 /*
@@ -31,7 +31,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char rcsid[] = "$OpenBSD: fparseln.c,v 1.2 2001/08/16 18:34:40 millert Exp $";
+static const char rcsid[] = "$OpenBSD: fparseln.c,v 1.3 2002/02/16 21:27:29 millert Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/cdefs.h>
