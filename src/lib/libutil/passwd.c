@@ -1,4 +1,4 @@
-/*	$OpenBSD: passwd.c,v 1.35 2002/06/27 22:21:50 deraadt Exp $	*/
+/*	$OpenBSD: passwd.c,v 1.36 2002/07/31 21:53:34 millert Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994, 1995
@@ -34,7 +34,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static const char rcsid[] = "$OpenBSD: passwd.c,v 1.35 2002/06/27 22:21:50 deraadt Exp $";
+static const char rcsid[] = "$OpenBSD: passwd.c,v 1.36 2002/07/31 21:53:34 millert Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/types.h>
@@ -143,10 +143,9 @@ pw_file(nm)
 		p++;
 	else
 		p = nm;
-	new_nm = malloc(strlen(pw_dir) + strlen(p) + 2);
-	if (!new_nm)
+
+	if (asprintf(&new_nm, "%s/%s", pw_dir, p) == -1)
 		return NULL;
-	sprintf(new_nm, "%s/%s", pw_dir, p);
 	return new_nm;
 }
 
