@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile.inc,v 1.8 2001/09/02 14:20:40 art Exp $
+#	$OpenBSD: Makefile.inc,v 1.9 2001/09/24 19:54:08 jason Exp $
 
 # hash functions
 .PATH: ${LIBCSRCDIR}/hash
@@ -17,5 +17,5 @@ sha1.o:
 	${CC} ${CFLAGS} ${CPPFLAGS} -O0 -c ${.IMPSRC}
 
 sha1.po:
-	${CC} ${CFLAGS} ${CPPFLAGS} -O0 -c ${.IMPSRC}
+	${CC} ${CFLAGS} ${CPPFLAGS} -O0 -c ${.IMPSRC} -o $@
 .endif
