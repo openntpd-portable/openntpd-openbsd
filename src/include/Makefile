@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile,v 1.86 2000/10/10 12:12:28 hugh Exp $
+#	$OpenBSD: Makefile,v 1.87 2000/11/21 00:51:30 millert Exp $
 #	$NetBSD: Makefile,v 1.59 1996/05/15 21:36:43 jtc Exp $
 
 #	@(#)Makefile	5.45.1.1 (Berkeley) 5/6/91
@@ -50,9 +50,9 @@ RDIRS=	../lib/libc_r ../lib/libcom_err ../lib/libcompat ../lib/libcurses \
 PRDIRS=
 
 # Directories with an includes target that use Makefile.bsd-wrapper
-WDIRS=	../lib/libssl ../gnu/lib/libgmp ../usr.sbin/httpd
-WDIRS+= ../gnu/egcs/libio ../gnu/egcs/libstdc++ ../gnu/egcs/libf2c \
-	../gnu/egcs/libobjc ../gnu/egcs/gcc
+WDIRS=	../lib/libssl ../usr.sbin/httpd ../gnu/egcs/libio \
+	../gnu/egcs/libstdc++ ../gnu/egcs/libf2c ../gnu/egcs/libobjc \
+	../gnu/egcs/gcc
 
 # Places using Makefile.bsd-wrapper that needs a prerequisite target met
 # before includes
