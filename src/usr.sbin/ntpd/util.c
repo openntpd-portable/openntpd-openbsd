@@ -1,4 +1,4 @@
-/*	$OpenBSD: util.c,v 1.7 2004/07/07 07:38:21 henning Exp $ */
+/*	$OpenBSD: util.c,v 1.8 2004/07/10 22:24:20 alexander Exp $ */
 
 /*
  * Copyright (c) 2004 Alexander Guy <alexander.guy@andern.org>
@@ -17,6 +17,7 @@
  */
 
 #include <sys/time.h>
+#include <limits.h>
 
 #include "ntpd.h"
 
