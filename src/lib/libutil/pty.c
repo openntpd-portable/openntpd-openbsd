@@ -1,4 +1,4 @@
-/*	$OpenBSD: pty.c,v 1.3 1996/06/17 07:46:05 downsj Exp $	*/
+/*	$OpenBSD: pty.c,v 1.4 1996/06/29 18:44:17 deraadt Exp $	*/
 /*-
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
@@ -51,12 +51,7 @@ static char *rcsid = "$Id$";
 
 #include "util.h"
 
-#ifdef i386
-/* PCVT conflicts with ttyv*. */
-#define TTY_LETTERS "pqrstuwxyzPQRST"
-#else
 #define TTY_LETTERS "pqrstuvwxyzPQRST"
-#endif
 
 int
 openpty(amaster, aslave, name, termp, winp)
