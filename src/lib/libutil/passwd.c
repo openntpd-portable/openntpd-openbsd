@@ -1,4 +1,4 @@
-/*	$OpenBSD: passwd.c,v 1.29 2001/11/14 19:50:23 deraadt Exp $	*/
+/*	$OpenBSD: passwd.c,v 1.30 2002/01/16 01:28:54 millert Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994, 1995
@@ -34,7 +34,7 @@
  */
 
 #if defined(LIBC_SCCS) && !defined(lint)
-static char rcsid[] = "$OpenBSD: passwd.c,v 1.29 2001/11/14 19:50:23 deraadt Exp $";
+static char rcsid[] = "$OpenBSD: passwd.c,v 1.30 2002/01/16 01:28:54 millert Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/types.h>
@@ -60,7 +60,7 @@ static char rcsid[] = "$OpenBSD: passwd.c,v 1.29 2001/11/14 19:50:23 deraadt Exp
 
 #define NUM_OPTIONS     2       /* Number of hardcoded defaults */
 
-static void	pw_cont __P((int sig));
+static void	pw_cont(int sig);
 
 static const char options[NUM_OPTIONS][2][80] =
 {

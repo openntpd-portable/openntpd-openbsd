@@ -1,4 +1,4 @@
-/*	$OpenBSD: ifaddrs.h,v 1.1 2000/02/23 06:55:59 itojun Exp $	*/
+/*	$OpenBSD: ifaddrs.h,v 1.2 2000/02/23 15:39:53 itojun Exp $	*/
 
 /*
  * Copyright (c) 1995, 1999
@@ -49,8 +49,8 @@ struct ifaddrs {
 #include <sys/cdefs.h>
 
 __BEGIN_DECLS
-extern int getifaddrs __P((struct ifaddrs **));
-extern void freeifaddrs __P((struct ifaddrs *));
+extern int getifaddrs(struct ifaddrs **);
+extern void freeifaddrs(struct ifaddrs *);
 __END_DECLS
 
 #endif

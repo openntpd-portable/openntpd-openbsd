@@ -1,4 +1,4 @@
-/*	$OpenBSD: utime.h,v 1.2 1997/09/21 10:45:59 niklas Exp $	*/
+/*	$OpenBSD: utime.h,v 1.3 1998/05/13 08:39:21 deraadt Exp $	*/
 /*	$NetBSD: utime.h,v 1.3 1994/10/26 00:56:39 cgd Exp $	*/
 
 /*-
@@ -54,7 +54,7 @@ struct utimbuf {
 #include <sys/cdefs.h>
 
 __BEGIN_DECLS
-int utime __P((const char *, const struct utimbuf *));
+int utime(const char *, const struct utimbuf *);
 __END_DECLS
 
 #endif /* !_UTIME_H_ */

@@ -1,4 +1,4 @@
-/*	$OpenBSD: check_expire.c,v 1.2 2001/08/16 18:34:40 millert Exp $	*/
+/*	$OpenBSD: check_expire.c,v 1.3 2001/08/16 18:39:20 millert Exp $	*/
 
 /*
  * Copyright (c) 1997 Berkeley Software Design, Inc. All rights reserved.
@@ -51,7 +51,7 @@
 
 #include "util.h"
 
-static char *pwd_update __P((struct passwd *));
+static char *pwd_update(struct passwd *);
 
 int
 login_check_expire(back, pwd, class, lastchance)
