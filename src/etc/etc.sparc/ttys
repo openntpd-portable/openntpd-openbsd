@@ -1,8 +1,0 @@
-#
-#	@(#)ttys	5.1 (Berkeley) 4/17/89
-#
-# name	getty				type	status		comments
-#
-console	"/usr/libexec/getty suncons"	sun	on secure
-ttya	"/usr/libexec/getty std.9600"	unknown	off secure
-ttyb	"/usr/libexec/getty std.9600"	unknown	off secure
