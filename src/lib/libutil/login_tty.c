@@ -39,8 +39,7 @@ static char *rcsid = "$Id$";
 #include <sys/param.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
-
-int login_tty __P((int));
+#include <util.h>
 
 int
 login_tty(fd)

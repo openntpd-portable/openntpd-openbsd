@@ -44,12 +44,11 @@ static char *rcsid = "$Id$";
 #include <string.h>
 #include <unistd.h>
 #include <utmp.h>
-
-void logwtmp __P((char *, char *, char *));
+#include <util.h>
 
 void
 logwtmp(line, name, host)
-	char *line, *name, *host;
+	const char *line, *name, *host;
 {
 	struct utmp ut;
 	struct stat buf;

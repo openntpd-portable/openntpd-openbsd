@@ -44,16 +44,16 @@ static char *rcsid = "$Id$";
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <util.h>
 
 typedef struct utmp UTMP;
 
 int
 logout(line)
-	register char *line;
+	const char *line;
 {
-	register int fd;
+	int fd, rval;
 	UTMP ut;
-	int rval;
 
 	if ((fd = open(_PATH_UTMP, O_RDWR, 0)) < 0)
 		return(0);
