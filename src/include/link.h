@@ -1,4 +1,4 @@
-/*	$OpenBSD: link.h,v 1.9 2002/02/16 21:27:17 millert Exp $	*/
+/*	$OpenBSD: link.h,v 1.10 2002/06/02 22:49:59 deraadt Exp $	*/
 /*	$NetBSD: link.h,v 1.10 1996/01/09 00:00:11 pk Exp $	*/
 
 /*
@@ -258,7 +258,7 @@ struct	_dynamic {
  */
 struct crt_ldso {
 	int		crt_ba;		/* Base address of ld.so */
-	int		crt_dzfd;	/* "/dev/zero" file decriptor (SunOS) */
+	int		crt_dzfd;	/* "/dev/zero" file descriptor (SunOS) */
 	int		crt_ldfd;	/* ld.so file descriptor */
 	struct _dynamic	*crt_dp;	/* Main's __DYNAMIC */
 	char		**crt_ep;	/* environment strings */
