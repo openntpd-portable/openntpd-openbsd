@@ -1,4 +1,4 @@
-/*	$OpenBSD: paths.h,v 1.14 1998/10/08 21:32:54 art Exp $	*/
+/*	$OpenBSD: paths.h,v 1.15 1999/02/03 04:34:06 angelos Exp $	*/
 /*	$NetBSD: paths.h,v 1.7 1994/10/26 00:56:12 cgd Exp $	*/
 
 /*
@@ -40,7 +40,7 @@
 #define	_PATHS_H_
 
 /* Default search path. */
-#define	_PATH_DEFPATH	"/usr/bin:/bin:/usr/X11R6/bin:/usr/local/bin"
+#define	_PATH_DEFPATH	"/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin"
 /* All standard utilities path. */
 #define	_PATH_STDPATH	"/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin"
 
