@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile,v 1.77 2000/02/19 15:28:41 deraadt Exp $
+#	$OpenBSD: Makefile,v 1.78 2000/02/23 06:55:59 itojun Exp $
 #	$NetBSD: Makefile,v 1.59 1996/05/15 21:36:43 jtc Exp $
 
 #	@(#)Makefile	5.45.1.1 (Berkeley) 5/6/91
@@ -59,8 +59,7 @@ NOOBJ=	noobj
 .include <bsd.own.mk>
 SYS_INCLUDE?=	copies
 .if (${KERBEROS} == "yes")
-RDIRS+=	../kerberosIV/include ../kerberosIV/kadm ../kerberosIV/krb
-PRDIRS+=../kerberosIV/kadm ../kerberosIV/krb
+RDIRS+=	../kerberosIV
 .endif
 
 prereq:
