@@ -1,3 +1,5 @@
+/*	$OpenBSD$	*/
+
 /************************************************************************
 * Copyright 1995 by Wietse Venema.  All rights reserved.
 *
