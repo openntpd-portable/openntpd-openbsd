@@ -1,4 +1,4 @@
-/*	$OpenBSD: stdio.h,v 1.9 1997/11/29 20:01:03 millert Exp $	*/
+/*	$OpenBSD: stdio.h,v 1.10 1998/11/20 11:18:26 d Exp $	*/
 /*	$NetBSD: stdio.h,v 1.18 1996/04/25 18:29:21 jtc Exp $	*/
 
 /*-
@@ -55,7 +55,11 @@ typedef	_BSD_SIZE_T_	size_t;
 #endif
 
 #ifndef NULL
+#ifdef 	__GNUG__
+#define	NULL	__null
+#else
 #define	NULL	0
+#endif
 #endif
 
 /*      

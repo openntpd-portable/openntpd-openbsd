@@ -1,4 +1,4 @@
-/*	$OpenBSD: string.h,v 1.4 1998/11/04 19:35:48 millert Exp $	*/
+/*	$OpenBSD: string.h,v 1.5 1998/11/20 11:18:26 d Exp $	*/
 /*	$NetBSD: string.h,v 1.6 1994/10/26 00:56:30 cgd Exp $	*/
 
 /*-
@@ -46,7 +46,11 @@ typedef	_BSD_SIZE_T_	size_t;
 #endif
 
 #ifndef	NULL
+#ifdef 	__GNUG__
+#define	NULL	__null
+#else
 #define	NULL	0
+#endif
 #endif
 
 #include <sys/cdefs.h>
