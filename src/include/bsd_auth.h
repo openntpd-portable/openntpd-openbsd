@@ -1,3 +1,5 @@
+/*	$OpenBSD$	*/
+
 /*-
  * Copyright (c) 1997 Berkeley Software Design, Inc. All rights reserved.
  *
