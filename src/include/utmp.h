@@ -1,4 +1,4 @@
-/*	$OpenBSD: utmp.h,v 1.6 1994/10/26 00:56:40 cgd Exp $	*/
+/*	$OpenBSD: utmp.h,v 1.2 1997/09/21 10:46:00 niklas Exp $	*/
 /*	$NetBSD: utmp.h,v 1.6 1994/10/26 00:56:40 cgd Exp $	*/
 
 /*
@@ -51,6 +51,11 @@
 #define	UT_NAMESIZE	8
 #define	UT_LINESIZE	8
 #define	UT_HOSTSIZE	16
+
+/*
+ * Note that these are *not* C strings and thus are not
+ * guaranteed to be NUL-terminated.
+ */
 
 struct lastlog {
 	time_t	ll_time;
