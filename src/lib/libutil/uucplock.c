@@ -71,7 +71,7 @@ uu_lock(ttyname)
 	const char *ttyname;
 {
 	int fd, tmpfd, i;
-	pid_t pid;
+	pid_t pid, pid_old;
 	char lckname[sizeof(_PATH_UUCPLOCK) + MAXNAMLEN],
 	     lcktmpname[sizeof(_PATH_UUCPLOCK) + MAXNAMLEN];
 	int err, uuerr;
@@ -96,12 +96,12 @@ uu_lock(ttyname)
 			if ((fd = open(lckname, O_RDONLY)) < 0)
 				GORET(1, UU_LOCK_OPEN_ERR);
 
-			if ((pid = get_pid (fd, &err)) == -1)
+			if ((pid_old = get_pid (fd, &err)) == -1)
 				GORET(2, UU_LOCK_READ_ERR);
 
 			close(fd);
 
-			if (kill(pid, 0) == 0 || errno != ESRCH)
+			if (kill(pid_old, 0) == 0 || errno != ESRCH)
 				GORET(1, UU_LOCK_INUSE);
 			/*
 			 * The process that locked the file isn't running, so
