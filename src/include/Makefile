@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile,v 1.129 2004/10/20 22:12:15 fgsch Exp $
+#	$OpenBSD: Makefile,v 1.130 2005/04/14 20:59:10 espie Exp $
 #	$NetBSD: Makefile,v 1.59 1996/05/15 21:36:43 jtc Exp $
 
 #	@(#)Makefile	5.45.1.1 (Berkeley) 5/6/91
@@ -39,7 +39,7 @@ LDIRS=	crypto ddb dev isofs miscfs net netatalk netccitt netinet altq \
 
 # Directories with an includes target
 RDIRS=	../lib/libpthread ../lib/libcompat ../lib/libcurses \
-	../lib/libcurses++ ../lib/libform ../lib/libssl ../lib/libmenu \
+	../lib/libform ../lib/libssl ../lib/libmenu \
 	../lib/libocurses ../lib/libossaudio ../lib/libpanel ../lib/librpcsvc \
 	../lib/libskey ../lib/libsectok ../lib/libedit ../lib/libpcap \
 	../lib/libutil ../lib/libusbhid ../lib/libwrap ../lib/libz \
