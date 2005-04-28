@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile,v 1.130 2005/04/14 20:59:10 espie Exp $
+#	$OpenBSD: Makefile,v 1.131 2005/04/18 16:17:43 millert Exp $
 #	$NetBSD: Makefile,v 1.59 1996/05/15 21:36:43 jtc Exp $
 
 #	@(#)Makefile	5.45.1.1 (Berkeley) 5/6/91
@@ -63,7 +63,7 @@ WDIRS+= ../gnu/lib/libstdc++ ../gnu/usr.bin/gcc ../gnu/lib/libobjc \
 PWDIRS+= ../gnu/lib/libstdc++ ../gnu/lib/libf2c
 .else
 WDIRS+= ../gnu/egcs/libio ../gnu/egcs/libstdc++ \
-	../gnu/egcs/libf2c ../gnu/egcs/libobjc ../gnu/egcs/gcc
+	../gnu/egcs/libf2c ../gnu/lib/libobjc ../gnu/egcs/gcc
 PWDIRS+= ../gnu/egcs/libf2c
 .endif
 
