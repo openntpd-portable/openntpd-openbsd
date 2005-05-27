@@ -1,4 +1,4 @@
-/*	$OpenBSD: stdlib.h,v 1.32 2004/08/03 19:59:42 millert Exp $	*/
+/*	$OpenBSD: stdlib.h,v 1.33 2005/05/11 18:44:12 espie Exp $	*/
 /*	$NetBSD: stdlib.h,v 1.25 1995/12/27 21:19:08 jtc Exp $	*/
 
 /*-
@@ -122,6 +122,10 @@ ldiv_t	 ldiv(long, long);
 long long
 	 llabs(long long);
 void	*malloc(size_t);
+char	*mkdtemp(char *);
+int	 mkstemp(char *);
+int	 mkstemps(char *, int);
+char	*mktemp(char *);
 void	 qsort(void *, size_t, size_t, int (*)(const void *, const void *));
 int	 rand(void);
 int	 rand_r(unsigned int *);
