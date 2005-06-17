@@ -146,6 +146,25 @@ wchar_t	*wmemset(wchar_t *, wchar_t, size_t);
 size_t	wcslcat(wchar_t *, const wchar_t *, size_t);
 size_t	wcslcpy(wchar_t *, const wchar_t *, size_t);
 int	wctob(wint_t);
+int	wcscoll(const wchar_t *, const wchar_t *);
+size_t	wcsxfrm(wchar_t *, const wchar_t *, size_t);
+
+wint_t ungetwc(wint_t, FILE *);
+wint_t fgetwc(FILE *);
+wchar_t *fgetws(wchar_t * __restrict, int, FILE * __restrict);
+wint_t getwc(FILE *);
+wint_t getwchar(void);
+wint_t fputwc(wchar_t, FILE *);
+int fputws(const wchar_t * __restrict, FILE * __restrict);
+wint_t putwc(wchar_t, FILE *);
+wint_t putwchar(wchar_t);
+
+int fwide(FILE *, int);
+
+#define getwc(f) fgetwc(f)
+#define getwchar() getwc(stdin)
+#define putwc(wc, f) fputwc((wc), (f))
+#define putwchar(wc) putwc((wc), stdout)
 __END_DECLS
 
 #endif /* !_WCHAR_H_ */
