@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.54 2005/03/23 10:42:04 henning Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.55 2005/04/26 15:18:22 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -59,6 +59,9 @@
 
 enum client_state {
 	STATE_NONE,
+	STATE_DNS_INPROGRESS,
+	STATE_DNS_TEMPFAIL,
+	STATE_DNS_DONE,
 	STATE_QUERY_SENT,
 	STATE_REPLY_RECEIVED
 };
