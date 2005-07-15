@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.57 2005/06/19 17:11:13 henning Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.58 2005/07/05 10:09:12 dtucker Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -33,7 +33,7 @@
 #define	NTPD_USER	"_ntp"
 #define	CONFFILE	"/etc/ntpd.conf"
 
-#define	READ_BUF_SIZE		65535
+#define	READ_BUF_SIZE		4096
 
 #define	NTPD_OPT_VERBOSE	0x0001
 #define	NTPD_OPT_VERBOSE2	0x0002
