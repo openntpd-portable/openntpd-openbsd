@@ -1,4 +1,4 @@
-/*	$OpenBSD: passwd.c,v 1.44 2004/07/13 21:09:48 millert Exp $	*/
+/*	$OpenBSD: passwd.c,v 1.45 2004/11/04 18:44:59 millert Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994, 1995
@@ -28,10 +28,6 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-
-#if defined(LIBC_SCCS) && !defined(lint)
-static const char rcsid[] = "$OpenBSD: passwd.c,v 1.44 2004/07/13 21:09:48 millert Exp $";
-#endif /* LIBC_SCCS and not lint */
 
 #include <sys/types.h>
 #include <sys/stat.h>

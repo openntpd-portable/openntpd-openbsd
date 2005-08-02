@@ -1,4 +1,4 @@
-/*	$OpenBSD: getrawpartition.c,v 1.3 2002/06/09 22:18:43 fgsch Exp $	*/
+/*	$OpenBSD: getrawpartition.c,v 1.4 2004/05/28 07:03:47 deraadt Exp $	*/
 /*	$NetBSD: getrawpartition.c,v 1.1 1996/05/16 07:03:33 thorpej Exp $	*/
 
 /*-
@@ -36,10 +36,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-#if defined(LIBC_SCCS) && !defined(lint)
-static const char rcsid[] = "$NetBSD: getrawpartition.c,v 1.1 1996/05/16 07:03:33 thorpej Exp $";
-#endif
 
 #include <sys/param.h>
 #include <sys/sysctl.h>
