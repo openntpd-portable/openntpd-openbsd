@@ -1,4 +1,4 @@
-/*	$OpenBSD: helper.c,v 1.6 2004/06/22 01:57:29 jfb Exp $	*/
+/*	$OpenBSD: helper.c,v 1.7 2004/09/16 15:12:09 millert Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------
@@ -8,10 +8,6 @@
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  */
-
-#if defined(LIBC_SCCS) && !defined(lint)
-static const char rcsid[] = "$OpenBSD: helper.c,v 1.6 2004/06/22 01:57:29 jfb Exp $";
-#endif /* LIBC_SCCS and not lint */
 
 #include <sys/param.h>
 #include <sys/stat.h>
