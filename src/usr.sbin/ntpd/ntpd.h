@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.58 2005/07/05 10:09:12 dtucker Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.59 2005/07/15 03:37:15 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -90,6 +90,7 @@ struct ntp_status {
 	double		reftime;
 	u_int32_t	refid;
 	u_int32_t	refid4;
+	u_int8_t	synced;
 	u_int8_t	leap;
 	int8_t		precision;
 	u_int8_t	poll;
