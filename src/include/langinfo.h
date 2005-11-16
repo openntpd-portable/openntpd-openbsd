@@ -1,4 +1,4 @@
-/*	$OpenBSD: langinfo.h,v 1.3 2001/01/29 01:32:37 naddy Exp $	*/
+/*	$OpenBSD: langinfo.h,v 1.4 2002/02/16 21:27:17 millert Exp $	*/
 /*	$NetBSD: langinfo.h,v 1.3 1995/04/28 23:30:54 jtc Exp $	*/
 
 /*
@@ -68,6 +68,8 @@
 #define NOSTR		48	/* Negative response for yes/no queries */
 #define NOEXPR		49	/* Negative response for yes/no queries */
 #define CRNCYSTR	50	/* Currency symbol */
+
+#define CODESET		51	/* Codeset name */
 
 __BEGIN_DECLS
 char *nl_langinfo(nl_item);
