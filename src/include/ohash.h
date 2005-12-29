@@ -1,6 +1,6 @@
 #ifndef OHASH_H
 #define OHASH_H
-/* $OpenBSD: ohash.h,v 1.6 2003/08/01 17:38:33 avsm Exp $ */
+/* $OpenBSD: ohash.h,v 1.7 2004/06/22 20:00:16 espie Exp $ */
 /* ex:ts=8 sw=4: 
  */
 
@@ -52,7 +52,6 @@ __BEGIN_DECLS
 void ohash_init(struct ohash *, unsigned, struct ohash_info *);
 void ohash_delete(struct ohash *);
 
-unsigned int ohash_lookup_string(struct ohash *, const char *, u_int32_t);
 unsigned int ohash_lookup_interval(struct ohash *, const char *,
 	    const char *, u_int32_t);
 unsigned int ohash_lookup_memory(struct ohash *, const char *,
