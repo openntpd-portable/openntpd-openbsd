@@ -1,4 +1,4 @@
-/*	$OpenBSD: search.h,v 1.6 2004/06/24 16:14:40 deraadt Exp $	*/
+/*	$OpenBSD: search.h,v 1.7 2004/07/08 21:15:11 millert Exp $	*/
 /*	$NetBSD: search.h,v 1.9 1995/08/08 21:14:45 jtc Exp $	*/
 
 /*
@@ -10,11 +10,11 @@
 #define _SEARCH_H_
 
 #include <sys/cdefs.h>
-#include <machine/ansi.h>
+#include <machine/_types.h>
 
-#ifdef	_BSD_SIZE_T_
-typedef	_BSD_SIZE_T_	size_t;
-#undef	_BSD_SIZE_T_
+#ifndef	_SIZE_T_DEFINED_
+#define	_SIZE_T_DEFINED_
+typedef	__size_t	size_t;
 #endif
 
 typedef struct entry {
