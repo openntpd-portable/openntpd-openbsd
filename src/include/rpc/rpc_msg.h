@@ -1,4 +1,4 @@
-/*	$OpenBSD: rpc_msg.h,v 1.3 2002/02/16 21:27:18 millert Exp $	*/
+/*	$OpenBSD: rpc_msg.h,v 1.4 2004/01/22 21:48:02 espie Exp $	*/
 /*	$NetBSD: rpc_msg.h,v 1.5 1995/04/29 05:28:00 cgd Exp $	*/
 
 /*
@@ -48,7 +48,7 @@
 
 /*
  * Bottom up definition of an rpc message.
- * NOTE: call and reply use the same overall stuct but
+ * NOTE: call and reply use the same overall struct but
  * different parts of unions within it.
  */
 
