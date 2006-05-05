@@ -1,4 +1,4 @@
-/*	$OpenBSD: math.h,v 1.10 2005/11/17 20:07:40 otto Exp $	*/
+/*	$OpenBSD: math.h,v 1.11 2005/12/13 00:35:22 millert Exp $	*/
 /*
  * ====================================================
  * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -23,7 +23,7 @@
  * ANSI/POSIX
  */
 extern char __infinity[];
-#define HUGE_VAL	(*(double *) __infinity)
+#define HUGE_VAL	(*(double *)(void *)__infinity)
 
 /* 
  * C99
