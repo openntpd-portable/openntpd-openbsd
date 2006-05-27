@@ -60,6 +60,7 @@
 
 #define	SENSOR_DATA_MAXAGE	15*60
 #define	SENSOR_QUERY_INTERVAL	30
+#define	SENSOR_SCAN_INTERVAL	5*60
 
 enum client_state {
 	STATE_NONE,
