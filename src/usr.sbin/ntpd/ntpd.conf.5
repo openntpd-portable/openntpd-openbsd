@@ -1,4 +1,4 @@
-.\" $OpenBSD: ntpd.conf.5,v 1.10 2006/05/23 14:29:16 henning Exp $
+.\" $OpenBSD: ntpd.conf.5,v 1.11 2006/05/27 17:01:36 henning Exp $
 .\"
 .\" Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
 .\"
@@ -61,7 +61,7 @@ listen on ::1
 Specify a timedelta sensor device
 .Xr ntpd 8
 should use.
-Can be specified multiple times,
+It can be specified multiple times:
 .Xr ntpd 8
 will use each given sensor that actually exists.
 Nonexistant sensors are ignored.
