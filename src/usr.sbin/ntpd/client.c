@@ -1,4 +1,4 @@
-/*	$OpenBSD: client.c,v 1.66 2005/09/24 00:32:03 dtucker Exp $ */
+/*	$OpenBSD: client.c,v 1.67 2006/05/25 19:25:46 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -237,9 +237,10 @@ client_dispatch(struct ntp_peer *p, u_int8_t settime)
 	if (p->reply[p->shift].delay < 0) {
 		interval = error_interval();
 		set_next(p, interval);
-		log_info("reply from %s: negative delay %f",
+		log_info("reply from %s: negative delay %fs, "
+		    "next query %ds",
 		    log_sockaddr((struct sockaddr *)&p->addr->ss),
-		    p->reply[p->shift].delay);
+		    p->reply[p->shift].delay, interval);
 		return (0);
 	}
 	p->reply[p->shift].error = (T2 - T1) - (T3 - T4);
