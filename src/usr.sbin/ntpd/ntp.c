@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.c,v 1.80 2006/06/01 05:44:35 henning Exp $ */
+/*	$OpenBSD: ntp.c,v 1.81 2006/06/01 06:04:15 otto Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -442,7 +442,7 @@ priv_adjtime(void)
 	TAILQ_FOREACH(s, &conf->ntp_sensors, entry) {
 		if (!s->update.good)
 			continue;
-		offset_cnt += p->weight;
+		offset_cnt += s->weight;
 	}
 
 	if ((offsets = calloc(offset_cnt, sizeof(struct ntp_offset *))) == NULL)
