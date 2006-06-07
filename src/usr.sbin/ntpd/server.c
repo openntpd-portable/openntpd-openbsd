@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.27 2006/01/19 06:40:16 dtucker Exp $ */
+/*	$OpenBSD: server.c,v 1.28 2006/01/19 11:20:23 dtucker Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -137,7 +137,7 @@ server_dispatch(int fd, struct ntpd_conf *conf)
 			fatal("recvfrom");
 	}
 
-	rectime = gettime();
+	rectime = gettime_corrected();
 
 	if (ntp_getmsg((struct sockaddr *)&fsa, buf, size, &query) == -1)
 		return (0);
@@ -160,7 +160,7 @@ server_dispatch(int fd, struct ntpd_conf *conf)
 	reply.precision = conf->status.precision;
 	reply.rectime = d_to_lfp(rectime);
 	reply.reftime = d_to_lfp(conf->status.reftime);
-	reply.xmttime = d_to_lfp(gettime());
+	reply.xmttime = d_to_lfp(gettime_corrected());
 	reply.orgtime = query.xmttime;
 	reply.rootdelay = d_to_sfp(conf->status.rootdelay);
 
