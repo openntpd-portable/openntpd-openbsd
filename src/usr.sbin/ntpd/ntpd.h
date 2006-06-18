@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.71 2006/06/07 06:29:03 otto Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.72 2006/06/17 18:40:42 otto Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -61,9 +61,9 @@
 #define	MAX_FREQUENCY_ADJUST	128e-5	/* max correction per iteration */
 
 
-#define	SENSOR_DATA_MAXAGE	15*60
+#define	SENSOR_DATA_MAXAGE	(15*60)
 #define	SENSOR_QUERY_INTERVAL	30
-#define	SENSOR_SCAN_INTERVAL	5*60
+#define	SENSOR_SCAN_INTERVAL	(5*60)
 
 enum client_state {
 	STATE_NONE,
