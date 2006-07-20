@@ -1,4 +1,4 @@
-/*	$OpenBSD: tftp.h,v 1.4 2003/06/02 19:34:12 millert Exp $	*/
+/*	$OpenBSD: tftp.h,v 1.5 2004/01/27 02:25:30 deraadt Exp $	*/
 /*	$NetBSD: tftp.h,v 1.3 1994/10/26 00:56:48 cgd Exp $	*/
 
 /*
@@ -39,6 +39,8 @@
  * Trivial File Transfer Protocol (IEN-133)
  */
 #define	SEGSIZE		512		/* data segment size */
+#define SEGSIZE_MIN	8		/* minimal data segment size */
+#define SEGSIZE_MAX	65464		/* maximal data segment size */
 
 /*
  * Packet types.
