@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.56 2005/11/24 02:09:13 deraadt Exp $ */
+/*	$OpenBSD: unistd.h,v 1.57 2005/12/13 00:35:22 millert Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -201,7 +201,7 @@ int	 seteuid(uid_t);
 int	 acct(const char *);
 int	 closefrom(int);
 int	 des_cipher(const char *, char *, int32_t, int);
-int	 des_setkey(const char *key);
+int	 des_setkey(const char *);
 void	 endusershell(void);
 int	 exect(const char *, char * const *, char * const *);
 char	*fflagstostr(u_int32_t);
