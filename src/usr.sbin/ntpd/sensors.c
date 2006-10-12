@@ -169,6 +169,8 @@ sensor_query(struct ntp_sensor *s)
 	s->update.status.reftime = sensor.tv.tv_sec;
 	s->update.status.synced = 1;
 
+	priv_adjtime();
+
 	log_debug("sensor %s: offset %f", s->device, s->update.offset);
 }
 
