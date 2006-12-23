@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.78 2006/10/27 12:22:41 henning Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.79 2006/11/20 20:58:47 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -140,7 +140,7 @@ struct ntp_sensor {
 	time_t				 next;
 	time_t				 last;
 	char				*device;
-	int				 sensorid;
+	int				 sensordevid;
 	u_int8_t			 weight;
 	u_int8_t			 shift;
 };
