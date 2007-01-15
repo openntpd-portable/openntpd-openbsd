@@ -1,4 +1,4 @@
-/*	$OpenBSD: sensors.c,v 1.29 2007/01/14 19:18:12 otto Exp $ */
+/*	$OpenBSD: sensors.c,v 1.30 2007/01/15 08:19:11 otto Exp $ */
 
 /*
  * Copyright (c) 2006 Henning Brauer <henning@openbsd.org>
@@ -76,6 +76,10 @@ sensor_probe(int devid, char *dxname, struct sensor *sensor)
 			log_warn("sensor_probe sysctl");
 		return (0);
 	}
+
+	if (sensordev.maxnumt[SENSOR_TIMEDELTA] == 0)
+		return (0);
+
 	strlcpy(dxname, sensordev.xname, MAXDEVNAMLEN);
 
 	slen = sizeof(*sensor);
