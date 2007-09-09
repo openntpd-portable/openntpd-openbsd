@@ -1,4 +1,4 @@
-/*	$OpenBSD: login_fbtab.c,v 1.12 2004/09/18 19:22:42 deraadt Exp $	*/
+/*	$OpenBSD: login_fbtab.c,v 1.13 2006/03/30 20:44:45 deraadt Exp $	*/
 
 /************************************************************************
 * Copyright 1995 by Wietse Venema.  All rights reserved.  Some individual
@@ -153,7 +153,7 @@ login_protect(const char *path, mode_t mask, uid_t uid, gid_t gid)
 			syslog(LOG_ERR, "%s: chown(%s): %m", _PATH_FBTAB, path);
 	} else {
 		/*
-		 * This is a wildcard directory (/path/to/whatever/*).
+		 * This is a wildcard directory (/path/to/whatever/ * ).
 		 * Make a copy of path without the trailing '*' (but leave
 		 * the trailing '/' so we can append directory entries.)
 		 */
