@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.84 2007/04/30 01:33:33 deraadt Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.85 2007/08/04 02:58:02 ckuethe Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -141,6 +141,7 @@ struct ntp_sensor {
 	time_t				 last;
 	char				*device;
 	int				 sensordevid;
+	int				 correction;
 	u_int8_t			 weight;
 	u_int8_t			 shift;
 };
@@ -148,6 +149,7 @@ struct ntp_sensor {
 struct ntp_conf_sensor {
 	TAILQ_ENTRY(ntp_conf_sensor)		 entry;
 	char					*device;
+	int					 correction;
 	u_int8_t				 weight;
 };
 
