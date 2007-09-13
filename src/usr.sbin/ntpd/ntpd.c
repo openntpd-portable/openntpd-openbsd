@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.50 2007/08/22 21:04:30 ckuethe Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.51 2007/09/13 14:34:36 pyr Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -72,7 +72,7 @@ usage(void)
 {
 	extern char *__progname;
 
-	fprintf(stderr, "usage: %s [-dSsv] [-f file]\n", __progname);
+	fprintf(stderr, "usage: %s [-dnSsv] [-f file]\n", __progname);
 	exit(1);
 }
 
