@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.85 2007/08/04 02:58:02 ckuethe Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.86 2007/09/12 21:08:46 ckuethe Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -172,6 +172,7 @@ struct ntpd_conf {
 	u_int8_t					settime;
 	u_int8_t					debug;
 	u_int32_t					scale;
+	u_int8_t					noaction;
 };
 
 struct buf {
