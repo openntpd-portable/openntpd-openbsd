@@ -1,4 +1,4 @@
-/* $OpenBSD: stdbool.h,v 1.2 1999/09/24 23:09:09 espie Exp $ */
+/* $OpenBSD: stdbool.h,v 1.3 2004/10/02 12:55:31 espie Exp $ */
 
 /*
  * Written by Marc Espie, September 25, 1999
@@ -10,7 +10,7 @@
 
 #ifndef __cplusplus
 
-#if defined(__GNUC__) && __GNUC__ >= 3
+#if (defined(__GNUC__) && __GNUC__ >= 3) || defined(__PCC__)
 /* Support for _C99: type _Bool is already built-in. */
 #define false	0
 #define true	1
