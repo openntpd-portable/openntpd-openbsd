@@ -1,4 +1,4 @@
-/*	$OpenBSD: sensors.c,v 1.33 2007/08/04 02:58:02 ckuethe Exp $ */
+/*	$OpenBSD: sensors.c,v 1.34 2007/09/12 21:08:46 ckuethe Exp $ */
 
 /*
  * Copyright (c) 2006 Henning Brauer <henning@openbsd.org>
@@ -184,6 +184,7 @@ sensor_query(struct ntp_sensor *s)
 	s->offsets[s->shift].good = 1;
 
 	s->offsets[s->shift].status.refid = htonl(refid);
+	s->offsets[s->shift].status.refid4 = htonl(refid);
 	s->offsets[s->shift].status.stratum = 0;	/* increased when sent out */
 	s->offsets[s->shift].status.rootdelay = 0;
 	s->offsets[s->shift].status.rootdispersion = 0;
