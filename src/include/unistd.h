@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.58 2006/08/28 15:47:28 espie Exp $ */
+/*	$OpenBSD: unistd.h,v 1.59 2006/12/20 08:12:00 espie Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -176,7 +176,7 @@ int	 ttyname_r(int, char *, size_t)
 
 #if __BSD_VISIBLE ||  __XPG_VISIBLE <= 500
 /* Interfaces withdrawn by X/Open Issue 5 Version 0 */
-void	 *brk(void *);
+int	 brk(void *);
 int	 chroot(const char *);
 int	 getdtablesize(void);
 int	 getpagesize(void);
