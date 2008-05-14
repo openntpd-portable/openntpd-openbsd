@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.57 2007/12/23 22:40:00 stevesk Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.58 2007/12/31 17:21:35 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -123,6 +123,11 @@ main(int argc, char *argv[])
 			/* NOTREACHED */
 		}
 	}
+
+	argc -= optind;
+	argv += optind;
+	if (argc > 0)
+		usage();
 
 	if (parse_config(conffile, &lconf))
 		exit(1);
