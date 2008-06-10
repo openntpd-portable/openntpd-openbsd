@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.30 2006/07/01 18:52:46 otto Exp $ */
+/*	$OpenBSD: server.c,v 1.31 2007/01/15 08:19:11 otto Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -162,11 +162,7 @@ server_dispatch(int fd, struct ntpd_conf *lconf)
 	reply.xmttime = d_to_lfp(gettime_corrected());
 	reply.orgtime = query.xmttime;
 	reply.rootdelay = d_to_sfp(lconf->status.rootdelay);
-
-	if (version > 3)
-		reply.refid = lconf->status.refid4;
-	else
-		reply.refid = lconf->status.refid;
+	reply.refid = lconf->status.refid;
 
 	ntp_sendmsg(fd, (struct sockaddr *)&fsa, &reply, size, 0);
 	return (0);
