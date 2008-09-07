@@ -1,4 +1,4 @@
-/*	$OpenBSD: stdlib.h,v 1.43 2008/06/20 15:21:06 ragge Exp $	*/
+/*	$OpenBSD: stdlib.h,v 1.44 2008/06/24 06:01:33 otto Exp $	*/
 /*	$NetBSD: stdlib.h,v 1.25 1995/12/27 21:19:08 jtc Exp $	*/
 
 /*-
@@ -132,6 +132,8 @@ void	 srand(unsigned);
 double	 strtod(const char *, char **);
 float	 strtof(const char *, char **);
 long	 strtol(const char *, char **, int);
+long double
+	 strtold(const char *, char **);
 unsigned long
 	 strtoul(const char *, char **, int);
 int	 system(const char *);
