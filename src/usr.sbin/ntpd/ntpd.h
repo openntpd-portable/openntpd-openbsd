@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.94 2008/06/09 18:30:48 deraadt Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.95 2008/06/10 03:46:09 naddy Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -316,3 +316,6 @@ int			sensor_scan(void);
 void			sensor_query(struct ntp_sensor *);
 int			sensor_hotplugfd(void);
 void			sensor_hotplugevent(int);
+
+/* ntp_dns.c */
+pid_t	ntp_dns(int[2], struct ntpd_conf *, struct passwd *);
