@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.c,v 1.107 2008/09/12 10:46:09 henning Exp $ */
+/*	$OpenBSD: ntp.c,v 1.108 2008/10/02 14:00:21 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -344,7 +344,7 @@ ntp_main(int pipe_prnt[2], struct ntpd_conf *nconf, struct passwd *pw)
 			sensor_hotplugevent(hotplugfd);
 		}
 
-		for (j = 1; nfds > 0 && j < idx_peers; j++)
+		for (j = PFD_MAX; nfds > 0 && j < idx_peers; j++)
 			if (pfd[j].revents & (POLLIN|POLLERR)) {
 				nfds--;
 				if (server_dispatch(pfd[j].fd, conf) == -1)
