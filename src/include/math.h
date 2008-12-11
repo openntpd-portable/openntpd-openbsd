@@ -1,4 +1,4 @@
-/*	$OpenBSD: math.h,v 1.22 2008/09/09 20:42:55 martynas Exp $	*/
+/*	$OpenBSD: math.h,v 1.23 2008/12/09 20:02:02 martynas Exp $	*/
 /*
  * ====================================================
  * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -35,6 +35,7 @@ typedef	__double_t	double_t;
 typedef	__float_t	float_t;
 
 #ifdef __vax__
+extern char __infinityf[];
 #define	HUGE_VALF	(*(float *)(void *)__infinityf)
 #else /* __vax__ */
 #define	HUGE_VALF	((float)HUGE_VAL)
