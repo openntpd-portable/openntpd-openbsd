@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp.c,v 1.103 2008/01/28 11:45:59 mpf Exp $ */
+/*	$OpenBSD: ntp_dns.c,v 1.1 2008/09/12 10:46:09 henning Exp $ */
 
 /*
  * Copyright (c) 2003-2008 Henning Brauer <henning@openbsd.org>
@@ -75,7 +75,6 @@ ntp_dns(int pipe_ntp[2], struct ntpd_conf *nconf, struct passwd *pw)
 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
 		fatal("can't drop privileges");
-	endservent();
 
 	signal(SIGTERM, sighdlr_dns);
 	signal(SIGINT, sighdlr_dns);
