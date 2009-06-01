@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.63 2009/02/06 21:48:00 stevesk Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.64 2009/02/10 16:52:09 stevesk Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -143,8 +143,6 @@ main(int argc, char *argv[])
 
 	if ((pw = getpwnam(NTPD_USER)) == NULL)
 		errx(1, "unknown user %s", NTPD_USER);
-
-	endpwent();
 
 	reset_adjtime();
 	if (!lconf.settime) {
