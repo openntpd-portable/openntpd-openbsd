@@ -1,4 +1,4 @@
-/*	$OpenBSD: helper.c,v 1.7 2004/09/16 15:12:09 millert Exp $	*/
+/*	$OpenBSD: helper.c,v 1.8 2005/08/08 08:05:35 espie Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------
@@ -62,8 +62,10 @@ HASHFileChunk(const char *filename, char *buf, off_t off, off_t len)
 		}
 		len = sb.st_size;
 	}
-	if (off > 0 && lseek(fd, off, SEEK_SET) < 0)
+	if (off > 0 && lseek(fd, off, SEEK_SET) < 0) {
+		close(fd);
 		return (NULL);
+	}
 
 	while ((nr = read(fd, buffer, MIN(sizeof(buffer), len))) > 0) {
 		HASHUpdate(&ctx, buffer, (size_t)nr);
