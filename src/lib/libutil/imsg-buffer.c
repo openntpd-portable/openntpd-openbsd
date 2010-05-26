@@ -1,4 +1,4 @@
-/*	$OpenBSD: buffer.c,v 1.12 2009/09/15 10:54:59 jacekm Exp $	*/
+/*	$OpenBSD: imsg-buffer.c,v 1.3 2010/05/26 13:56:07 nicm Exp $	*/
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
