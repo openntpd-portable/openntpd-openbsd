@@ -1,4 +1,4 @@
-/*	$OpenBSD: opendev.c,v 1.7 2002/06/09 22:18:43 fgsch Exp $	*/
+/*	$OpenBSD: opendev.c,v 1.9 2010/06/18 17:03:06 jsing Exp $	*/
 
 /*
  * Copyright (c) 2000, Todd C. Miller.  All rights reserved.
@@ -32,7 +32,9 @@
 #include <paths.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
+#include <sys/ioctl.h>
 #include <sys/limits.h>
 #include <sys/disk.h>
 #include <sys/dkio.h>
