@@ -1,4 +1,4 @@
-/*	$OpenBSD: signal.h,v 1.11 2007/03/17 21:38:14 espie Exp $	*/
+/*	$OpenBSD: signal.h,v 1.12 2008/04/29 14:44:04 kettenis Exp $	*/
 /*	$NetBSD: signal.h,v 1.8 1996/02/29 00:04:57 jtc Exp $	*/
 
 /*-
@@ -63,7 +63,7 @@ int	sigprocmask(int, const sigset_t *, sigset_t *);
 int	sigsuspend(const sigset_t *);
 
 #if defined(__GNUC__)
-#  if  defined(__GNUC_STDC_INLINE__)
+#  if __GNUC_PREREQ__(4, 2)
 #define __SIGNAL_INLINE	extern __inline __attribute((__gnu_inline__))
 #  else
 #define __SIGNAL_INLINE	extern __inline
