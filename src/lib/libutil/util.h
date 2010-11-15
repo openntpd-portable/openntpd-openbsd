@@ -114,6 +114,7 @@ int	uu_lock_txfr(const char *_ttyname, pid_t _pid);
 int     uu_unlock(const char *_ttyname);
 int	fmt_scaled(long long number, char *result);
 int	scan_scaled(char *scaled, long long *result);
+int	isduid(const char *, int);
 __END_DECLS
 
 #endif /* !_UTIL_H_ */

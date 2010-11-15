@@ -5,7 +5,7 @@ LIB=	util
 WANTLINT=
 
 HDRS=	util.h imsg.h
-SRCS=	check_expire.c getmaxpartitions.c getrawpartition.c login.c \
+SRCS=	check_expire.c duid.c getmaxpartitions.c getrawpartition.c login.c \
 	login_tty.c logout.c logwtmp.c opendev.c passwd.c pty.c readlabel.c \
 	login_fbtab.c uucplock.c fparseln.c opendisk.c pidfile.c \
 	fmt_scaled.c imsg.c imsg-buffer.c
@@ -61,8 +61,8 @@ MLINKS+=fmt_scaled.3 scan_scaled.3
 includes:
 	@cd ${.CURDIR}; for i in $(HDRS); do \
 	    j="cmp -s $$i ${DESTDIR}/usr/include/$$i || \
-		${INSTALL} ${INSTALL_COPY} -o ${BINOWN} -g ${BINGRP} -m 444 $$i \
-		${DESTDIR}/usr/include"; \
+		${INSTALL} ${INSTALL_COPY} -o ${BINOWN} -g ${BINGRP} \
+		-m 444 $$i ${DESTDIR}/usr/include"; \
 	    echo $$j; \
 	    eval "$$j"; \
 	done
