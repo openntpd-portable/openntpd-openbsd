@@ -1,4 +1,4 @@
-/*	$OpenBSD: time.h,v 1.17 2005/12/13 00:35:22 millert Exp $	*/
+/*	$OpenBSD: time.h,v 1.18 2006/01/06 18:53:04 millert Exp $	*/
 /*	$NetBSD: time.h,v 1.9 1994/10/26 00:56:35 cgd Exp $	*/
 
 /*
@@ -48,7 +48,7 @@
 #ifdef 	__GNUG__
 #define	NULL	__null
 #else
-#define	NULL	0L
+#define	NULL	((void *)0)
 #endif
 #endif
 
