@@ -172,14 +172,6 @@ wint_t putwchar(wchar_t);
 
 int fwide(FILE *, int);
 
-int fwprintf(FILE * __restrict, const wchar_t * __restrict, ...);
-int swprintf(wchar_t * __restrict, size_t, const wchar_t * __restrict, ...);
-int vfwprintf(FILE * __restrict, const wchar_t * __restrict, __va_list);
-int vswprintf(wchar_t * __restrict, size_t, const wchar_t * __restrict,
-	__va_list);
-int vwprintf(const wchar_t * __restrict, __va_list);
-int wprintf(const wchar_t * __restrict, ...);
-
 #define getwc(f) fgetwc(f)
 #define getwchar() getwc(stdin)
 #define putwc(wc, f) fputwc((wc), (f))
