@@ -1,4 +1,4 @@
-/*	$OpenBSD: grp.h,v 1.7 2003/06/25 21:06:33 deraadt Exp $	*/
+/*	$OpenBSD: grp.h,v 1.8 2005/12/13 00:35:22 millert Exp $	*/
 /*	$NetBSD: grp.h,v 1.7 1995/04/29 05:30:40 cgd Exp $	*/
 
 /*-
@@ -45,6 +45,7 @@
 
 #if __BSD_VISIBLE
 #define	_PATH_GROUP		"/etc/group"
+#define	_GR_BUF_LEN		(1024+200*sizeof(char*))
 #endif
 
 struct group {
