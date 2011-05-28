@@ -1,4 +1,4 @@
-/*	$OpenBSD: wchar.h,v 1.13 2011/04/24 07:46:58 stsp Exp $	*/
+/*	$OpenBSD: wchar.h,v 1.15 2011/04/28 17:38:46 stsp Exp $	*/
 /*	$NetBSD: wchar.h,v 1.16 2003/03/07 07:11:35 tshiozak Exp $	*/
 
 /*-
@@ -144,6 +144,11 @@ double wcstod(const wchar_t * __restrict, wchar_t ** __restrict);
 long int wcstol(const wchar_t * __restrict, wchar_t ** __restrict, int base);
 unsigned long int wcstoul(const wchar_t * __restrict, wchar_t ** __restrict,
 		int base);
+
+#if __POSIX_C_SOURCE >= 200809L
+int wcscasecmp(const wchar_t *, const wchar_t *);
+int wcsncasecmp(const wchar_t *, const wchar_t *, size_t);
+#endif
 
 #if __ISO_C_VISIBLE >= 1999
 float	wcstof(const wchar_t * __restrict, wchar_t ** __restrict);
