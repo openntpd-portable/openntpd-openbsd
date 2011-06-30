@@ -81,9 +81,6 @@ opendev(const char *path, int oflags, int dflags, char **realpath)
 				fd = -1;
 				errno = ENOENT;
 			}
-		} else if (errno != ENOENT) {
-			errno = ENXIO;
-			return -1;
 		}
 	}
 	if (!slash && fd == -1 && errno == ENOENT) {
