@@ -1,4 +1,4 @@
-/*	$OpenBSD: dirent.h,v 1.20 2010/12/31 19:54:05 guenther Exp $	*/
+/*	$OpenBSD: dirent.h,v 1.21 2011/04/06 11:39:42 miod Exp $	*/
 /*	$NetBSD: dirent.h,v 1.9 1995/03/26 20:13:37 jtc Exp $	*/
 
 /*-
@@ -84,6 +84,8 @@ typedef struct _dirdesc {
 #ifndef NULL
 #ifdef 	__GNUG__
 #define	NULL	__null
+#elif defined(__cplusplus)
+#define	NULL	0L
 #else
 #define	NULL	((void *)0)
 #endif /* __GNUG__ */

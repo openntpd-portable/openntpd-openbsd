@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.62 2008/06/25 14:58:54 millert Exp $ */
+/*	$OpenBSD: unistd.h,v 1.63 2011/04/06 11:39:42 miod Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -58,6 +58,8 @@
 #ifndef NULL
 #ifdef 	__GNUG__
 #define	NULL	__null
+#elif defined(__cplusplus)
+#define	NULL	0L
 #else
 #define	NULL	((void *)0)
 #endif
