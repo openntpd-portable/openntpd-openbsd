@@ -1,4 +1,4 @@
-/*	$OpenBSD: wchar.h,v 1.17 2011/06/01 16:39:07 millert Exp $	*/
+/*	$OpenBSD: wchar.h,v 1.18 2011/07/03 18:51:01 jsg Exp $	*/
 /*	$NetBSD: wchar.h,v 1.16 2003/03/07 07:11:35 tshiozak Exp $	*/
 
 /*-
@@ -148,6 +148,7 @@ unsigned long int wcstoul(const wchar_t * __restrict, wchar_t ** __restrict,
 		int base);
 
 #if __POSIX_VISIBLE >= 200809
+wchar_t	*wcsdup(const wchar_t *);
 int wcscasecmp(const wchar_t *, const wchar_t *);
 int wcsncasecmp(const wchar_t *, const wchar_t *, size_t);
 #endif
