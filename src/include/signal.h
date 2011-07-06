@@ -1,4 +1,4 @@
-/*	$OpenBSD: signal.h,v 1.13 2010/07/26 07:08:22 kettenis Exp $	*/
+/*	$OpenBSD: signal.h,v 1.14 2010/10/01 20:10:24 guenther Exp $	*/
 /*	$NetBSD: signal.h,v 1.8 1996/02/29 00:04:57 jtc Exp $	*/
 
 /*-
@@ -71,7 +71,7 @@ __only_inline int sigaddset(sigset_t *set, int signo) {
 		*__errno() = 22;		/* EINVAL */
 		return -1;
 	}
-	*set |= (1 << ((signo)-1));		/* sigmask(signo) */
+	*set |= (1U << ((signo)-1));		/* sigmask(signo) */
 	return (0);
 }
 
@@ -82,7 +82,7 @@ __only_inline int sigdelset(sigset_t *set, int signo) {
 		*__errno() = 22;		/* EINVAL */
 		return -1;
 	}
-	*set &= ~(1 << ((signo)-1));		/* sigmask(signo) */
+	*set &= ~(1U << ((signo)-1));		/* sigmask(signo) */
 	return (0);
 }
 
@@ -93,7 +93,7 @@ __only_inline int sigismember(const sigset_t *set, int signo) {
 		*__errno() = 22;		/* EINVAL */
 		return -1;
 	}
-	return ((*set & (1 << ((signo)-1))) != 0);
+	return ((*set & (1U << ((signo)-1))) != 0);
 }
 #endif /* !_ANSI_LIBRARY && !lint */
 
