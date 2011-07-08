@@ -1,4 +1,4 @@
-/*	$OpenBSD: complex.h,v 1.2 2008/12/04 03:52:31 ray Exp $	*/
+/*	$OpenBSD: complex.h,v 1.3 2010/07/24 22:17:03 guenther Exp $	*/
 /*
  * Copyright (c) 2008 Martynas Venckus <martynas@openbsd.org>
  *
@@ -94,7 +94,6 @@ float crealf(float complex);
 /* 
  * Long double versions of C99 functions
  */
-#if 0
 long double complex cacosl(long double complex);
 long double complex casinl(long double complex);
 long double complex catanl(long double complex);
@@ -118,7 +117,6 @@ long double cimagl(long double complex);
 long double complex conjl(long double complex);
 long double complex cprojl(long double complex);
 long double creall(long double complex);
-#endif
 __END_DECLS
 
 #endif /* !_COMPLEX_H_ */
