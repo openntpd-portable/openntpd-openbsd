@@ -1,4 +1,4 @@
-/*	$OpenBSD: dirent.h,v 1.22 2011/07/03 18:51:01 jsg Exp $	*/
+/*	$OpenBSD: dirent.h,v 1.23 2011/07/14 02:16:00 deraadt Exp $	*/
 /*	$NetBSD: dirent.h,v 1.9 1995/03/26 20:13:37 jtc Exp $	*/
 
 /*-
@@ -97,6 +97,9 @@ typedef void *	DIR;
 #ifndef _KERNEL
 __BEGIN_DECLS
 DIR *opendir(const char *);
+#if __POSIX_VISIBLE >= 200809
+DIR *fdopendir(int);
+#endif
 struct dirent *readdir(DIR *);
 void rewinddir(DIR *);
 int closedir(DIR *);
