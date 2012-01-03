@@ -1,4 +1,4 @@
-/*	$OpenBSD: signal.h,v 1.15 2011/07/06 17:39:22 guenther Exp $	*/
+/*	$OpenBSD: signal.h,v 1.16 2011/11/22 21:13:30 guenther Exp $	*/
 /*	$NetBSD: signal.h,v 1.8 1996/02/29 00:04:57 jtc Exp $	*/
 
 /*-
@@ -60,6 +60,9 @@ int	sigfillset(sigset_t *);
 int	sigismember(const sigset_t *, int);
 int	sigpending(sigset_t *);
 int	sigprocmask(int, const sigset_t *, sigset_t *);
+#if __POSIX_VISIBLE >= 199506
+int	pthread_sigmask(int, const sigset_t *, sigset_t *);
+#endif
 int	sigsuspend(const sigset_t *);
 
 #if !defined(_ANSI_LIBRARY) && !defined(lint)
