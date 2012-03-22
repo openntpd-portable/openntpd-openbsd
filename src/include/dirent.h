@@ -1,4 +1,4 @@
-/*	$OpenBSD: dirent.h,v 1.24 2011/07/18 17:29:49 matthew Exp $	*/
+/*	$OpenBSD: dirent.h,v 1.25 2012/03/22 01:13:40 matthew Exp $	*/
 /*	$NetBSD: dirent.h,v 1.9 1995/03/26 20:13:37 jtc Exp $	*/
 
 /*-
@@ -112,12 +112,13 @@ long telldir(DIR *);
 void seekdir(DIR *, long);
 #endif
 #if __POSIX_VISIBLE >= 199506 || __XPG_VISIBLE >= 500
-int readdir_r(DIR *, struct dirent *, struct dirent **);
+int readdir_r(DIR *__restrict, struct dirent *__restrict,
+    struct dirent **__restrict);
 #endif
-#if __BSD_VISIBLE || __POSIX_VISIBLE >= 200809
-int scandir(const char *, struct dirent ***,
-    int (*)(struct dirent *), int (*)(const void *, const void *));
-int alphasort(const void *, const void *);
+#if __POSIX_VISIBLE >= 200809
+int scandir(const char *, struct dirent ***, int (*)(struct dirent *),
+    int (*)(const struct dirent **, const struct dirent **));
+int alphasort(const struct dirent **, const struct dirent **);
 #endif
 #if __POSIX_VISIBLE >= 200809 || __XPG_VISIBLE > 600
 int (dirfd)(DIR *);
