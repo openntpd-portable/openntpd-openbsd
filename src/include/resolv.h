@@ -1,4 +1,4 @@
-/*	$OpenBSD: resolv.h,v 1.16 2005/03/30 02:58:28 tedu Exp $	*/
+/*	$OpenBSD: resolv.h,v 1.17 2009/06/04 18:06:35 pyr Exp $	*/
 
 /*
  * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
@@ -88,13 +88,8 @@
 #ifndef _RESOLV_H_
 #define	_RESOLV_H_
 
-#include <sys/param.h>
-#if (!defined(BSD)) || (BSD < 199306)
-# include <sys/bitypes.h>
-#else
-# include <sys/types.h>
-#endif
 #include <sys/cdefs.h>
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
 
