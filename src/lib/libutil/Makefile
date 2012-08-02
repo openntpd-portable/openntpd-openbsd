@@ -1,8 +1,7 @@
-#	$OpenBSD: Makefile,v 1.30 2009/10/28 00:04:26 deraadt Exp $
+#	$OpenBSD: Makefile,v 1.33 2010/11/17 10:10:31 jsing Exp $
 #	$NetBSD: Makefile,v 1.8 1996/05/16 07:03:28 thorpej Exp $
 
 LIB=	util
-WANTLINT=
 
 HDRS=	util.h imsg.h
 SRCS=	check_expire.c duid.c getmaxpartitions.c getrawpartition.c login.c \
