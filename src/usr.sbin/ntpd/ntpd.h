@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.104 2011/09/21 15:41:30 phessler Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.105 2011/09/21 16:38:05 phessler Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -147,6 +147,7 @@ struct ntp_sensor {
 	u_int32_t			 refid;
 	int				 sensordevid;
 	int				 correction;
+	u_int8_t			 stratum;
 	u_int8_t			 weight;
 	u_int8_t			 shift;
 };
@@ -156,6 +157,7 @@ struct ntp_conf_sensor {
 	char					*device;
 	char					*refstr;
 	int					 correction;
+	u_int8_t				 stratum;
 	u_int8_t				 weight;
 };
 
