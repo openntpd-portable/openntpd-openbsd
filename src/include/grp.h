@@ -1,4 +1,4 @@
-/*	$OpenBSD: grp.h,v 1.8 2005/12/13 00:35:22 millert Exp $	*/
+/*	$OpenBSD: grp.h,v 1.9 2011/04/25 20:10:10 sthen Exp $	*/
 /*	$NetBSD: grp.h,v 1.7 1995/04/29 05:30:40 cgd Exp $	*/
 
 /*-
@@ -58,10 +58,12 @@ struct group {
 __BEGIN_DECLS
 struct group	*getgrgid(gid_t);
 struct group	*getgrnam(const char *);
-#if __BSD_VISIBLE || __POSIX_VISIBLE >= 200112 || __XPG_VISIBLE
+#if __BSD_VISIBLE || __XPG_VISIBLE
 struct group	*getgrent(void);
 void		 setgrent(void);
 void		 endgrent(void);
+#endif
+#if __BSD_VISIBLE || __POSIX_VISIBLE >= 199506 || __XPG_VISIBLE
 int		 getgrgid_r(gid_t, struct group *, char *,
 		    size_t, struct group **);
 int		 getgrnam_r(const char *, struct group *, char *,
