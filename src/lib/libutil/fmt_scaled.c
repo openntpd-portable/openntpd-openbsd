@@ -1,4 +1,4 @@
-/*	$OpenBSD: fmt_scaled.c,v 1.9 2007/03/20 03:42:52 tedu Exp $	*/
+/*	$OpenBSD: fmt_scaled.c,v 1.10 2009/06/20 15:00:04 martynas Exp $	*/
 
 /*
  * Copyright (c) 2001, 2002, 2003 Ian F. Darwin.  All rights reserved.
@@ -177,7 +177,9 @@ scan_scaled(char *scaled, long long *result)
 			return 0;
 		}
 	}
-	errno = ERANGE;
+
+	/* Invalid unit or character */
+	errno = EINVAL;
 	return -1;
 }
 
