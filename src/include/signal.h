@@ -1,4 +1,4 @@
-/*	$OpenBSD: signal.h,v 1.18 2012/05/13 16:22:05 espie Exp $	*/
+/*	$OpenBSD: signal.h,v 1.19 2012/06/10 21:31:03 guenther Exp $	*/
 /*	$NetBSD: signal.h,v 1.8 1996/02/29 00:04:57 jtc Exp $	*/
 
 /*-
@@ -35,7 +35,6 @@
 #ifndef _USER_SIGNAL_H
 #define _USER_SIGNAL_H
 
-#include <sys/cdefs.h>
 #include <sys/signal.h>
 
 #if __BSD_VISIBLE || __POSIX_VISIBLE || __XPG_VISIBLE

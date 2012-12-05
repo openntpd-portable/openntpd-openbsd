@@ -1,4 +1,4 @@
-/*	$OpenBSD: math.h,v 1.29 2011/05/25 21:46:49 martynas Exp $	*/
+/*	$OpenBSD: math.h,v 1.30 2011/07/06 00:02:42 martynas Exp $	*/
 /*
  * ====================================================
  * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -18,7 +18,6 @@
 #define _MATH_H_
 
 #include <sys/_types.h>
-#include <sys/cdefs.h>
 #include <sys/limits.h>
 
 __BEGIN_DECLS

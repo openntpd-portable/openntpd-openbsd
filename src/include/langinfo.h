@@ -1,4 +1,4 @@
-/*	$OpenBSD: langinfo.h,v 1.5 2005/11/16 16:48:14 espie Exp $	*/
+/*	$OpenBSD: langinfo.h,v 1.6 2011/07/07 14:25:15 sobrado Exp $	*/
 /*	$NetBSD: langinfo.h,v 1.3 1995/04/28 23:30:54 jtc Exp $	*/
 
 /*
@@ -9,7 +9,6 @@
 #ifndef _LANGINFO_H_
 #define _LANGINFO_H_
 
-#include <sys/cdefs.h>
 #include <nl_types.h>
 
 #define D_T_FMT		0	/* String for formatting date and time */

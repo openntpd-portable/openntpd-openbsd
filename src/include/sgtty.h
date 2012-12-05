@@ -1,4 +1,4 @@
-/*	$OpenBSD: sgtty.h,v 1.3 2002/02/16 21:27:17 millert Exp $	*/
+/*	$OpenBSD: sgtty.h,v 1.4 2003/06/02 19:34:12 millert Exp $	*/
 /*	$NetBSD: sgtty.h,v 1.4 1995/06/05 19:40:33 pk Exp $	*/
 
 /*
@@ -36,7 +36,6 @@
 #define	USE_OLD_TTY
 #endif
 #include <sys/ioctl.h>
-#include <sys/cdefs.h>
 
 __BEGIN_DECLS
 int gtty(int, struct sgttyb *);

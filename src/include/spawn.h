@@ -1,4 +1,4 @@
-/*	$OpenBSD$	*/
+/*	$OpenBSD: spawn.h,v 1.1 2012/03/21 23:20:35 matthew Exp $	*/
 /*-
  * Copyright (c) 2008 Ed Schouten <ed@FreeBSD.org>
  * All rights reserved.
@@ -30,7 +30,6 @@
 #ifndef _SPAWN_H_
 #define _SPAWN_H_
 
-#include <sys/cdefs.h>
 #include <sys/types.h>
 #include <sys/signal.h>
 

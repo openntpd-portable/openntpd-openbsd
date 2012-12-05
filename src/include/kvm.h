@@ -1,4 +1,4 @@
-/*	$OpenBSD: kvm.h,v 1.15 2011/03/12 04:54:28 guenther Exp $	*/
+/*	$OpenBSD: kvm.h,v 1.16 2012/01/07 05:38:12 guenther Exp $	*/
 /*	$NetBSD: kvm.h,v 1.7 1996/04/19 12:02:50 leo Exp $	*/
 
 /*-
@@ -46,7 +46,6 @@
 #define KVM_NO_FILES	0x80000000
 
 #include <nlist.h>
-#include <sys/cdefs.h>
 #include <stdio.h>
 
 __BEGIN_DECLS

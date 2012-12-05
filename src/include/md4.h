@@ -1,4 +1,4 @@
-/*	$OpenBSD: md4.h,v 1.14 2004/05/03 17:30:14 millert Exp $	*/
+/*	$OpenBSD: md4.h,v 1.15 2004/06/22 01:57:30 jfb Exp $	*/
 
 /*
  * This code implements the MD4 message-digest algorithm.
@@ -25,8 +25,6 @@ typedef struct MD4Context {
 	u_int64_t count;			/* number of bits, mod 2^64 */
 	u_int8_t buffer[MD4_BLOCK_LENGTH];	/* input buffer */
 } MD4_CTX;
-
-#include <sys/cdefs.h>
 
 __BEGIN_DECLS
 void	 MD4Init(MD4_CTX *);

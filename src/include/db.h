@@ -1,4 +1,4 @@
-/*	$OpenBSD: db.h,v 1.7 2003/06/02 19:34:12 millert Exp $	*/
+/*	$OpenBSD: db.h,v 1.8 2004/01/22 21:48:02 espie Exp $	*/
 /*	$NetBSD: db.h,v 1.13 1994/10/26 00:55:48 cgd Exp $	*/
 
 /*-
@@ -36,7 +36,6 @@
 #define	_DB_H_
 
 #include <sys/types.h>
-#include <sys/cdefs.h>
 
 #include <limits.h>
 

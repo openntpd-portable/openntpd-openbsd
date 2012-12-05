@@ -1,4 +1,4 @@
-/*	$OpenBSD: sha2.h,v 1.6 2004/06/22 01:57:30 jfb Exp $	*/
+/*	$OpenBSD: sha2.h,v 1.7 2008/09/06 12:00:19 djm Exp $	*/
 
 /*
  * FILE:	sha2.h
@@ -59,8 +59,6 @@ typedef struct _SHA2_CTX {
 	u_int64_t	bitcount[2];
 	u_int8_t	buffer[SHA512_BLOCK_LENGTH];
 } SHA2_CTX;
-
-#include <sys/cdefs.h>
 
 __BEGIN_DECLS
 void SHA256Init(SHA2_CTX *);

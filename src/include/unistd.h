@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.72 2012/05/30 19:34:30 matthew Exp $ */
+/*	$OpenBSD: unistd.h,v 1.73 2012/06/21 00:56:59 guenther Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -35,7 +35,6 @@
 #ifndef _UNISTD_H_
 #define	_UNISTD_H_
 
-#include <sys/cdefs.h>
 #include <sys/types.h>
 #include <sys/unistd.h>
 
