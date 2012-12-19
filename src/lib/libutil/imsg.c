@@ -1,4 +1,4 @@
-/*	$OpenBSD: imsg.c,v 1.1 2010/05/26 16:44:32 nicm Exp $	*/
+/*	$OpenBSD: imsg.c,v 1.2 2012/06/02 21:46:53 gilles Exp $	*/
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -103,7 +103,7 @@ again:
 			    (char *)CMSG_DATA(cmsg)) / sizeof(int);
 			for (i = 0; i < j; i++) {
 				fd = ((int *)CMSG_DATA(cmsg))[i];
-				if (i == 0) {
+				if (ifd != NULL) {
 					ifd->fd = fd;
 					TAILQ_INSERT_TAIL(&ibuf->fds, ifd,
 					    entry);
