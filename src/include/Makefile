@@ -132,8 +132,7 @@ copies:
 	cd ../sys; \
 	pax -rw -pa -L \
 	    `find ${LDIRS} -follow -type f -name '*.h' \
-	    '!' -path 'dev/microcode/*' '!' -path 'dev/pci/drm/i915*' \
-	    -print` ${DESTDIR}/usr/include
+	    '!' -path 'dev/microcode/*' -print` ${DESTDIR}/usr/include
 	cd ${DESTDIR}/usr/include && rm -rf ${MACHINE} ${MACHINE_CPU} machine
 	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m 755 \
 		${DESTDIR}/usr/include/${MACHINE}
