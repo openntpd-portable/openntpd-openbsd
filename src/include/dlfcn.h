@@ -1,4 +1,4 @@
-/*	$OpenBSD: dlfcn.h,v 1.11 2007/05/29 04:47:17 jason Exp $	*/
+/*	$OpenBSD: dlfcn.h,v 1.12 2012/10/01 00:21:19 guenther Exp $	*/
 /*	$NetBSD: dlfcn.h,v 1.2 1995/06/05 19:38:00 pk Exp $	*/
 
 /*
@@ -85,7 +85,7 @@ __BEGIN_DECLS
 void	*dlopen(const char *, int);
 int	dlclose(void *);
 void	*dlsym(void *__restrict, const char *__restrict);
-const char	*dlerror(void);
+char	*dlerror(void);
 
 #if __BSD_VISIBLE
 int	dladdr(const void *, Dl_info *);
