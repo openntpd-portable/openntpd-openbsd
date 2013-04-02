@@ -1,4 +1,4 @@
-/*	$OpenBSD: utime.h,v 1.5 2003/06/02 19:34:12 millert Exp $	*/
+/*	$OpenBSD: utime.h,v 1.6 2006/01/06 18:53:04 millert Exp $	*/
 /*	$NetBSD: utime.h,v 1.3 1994/10/26 00:56:39 cgd Exp $	*/
 
 /*-
@@ -36,7 +36,7 @@
 #define	_UTIME_H_
 
 #include <sys/cdefs.h>
-#include <machine/_types.h>
+#include <sys/_types.h>
 
 #ifndef	_TIME_T_DEFINED_
 #define	_TIME_T_DEFINED_
