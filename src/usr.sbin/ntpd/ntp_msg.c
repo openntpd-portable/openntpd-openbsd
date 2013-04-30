@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp_msg.c,v 1.17 2007/05/26 21:20:35 henning Exp $ */
+/*	$OpenBSD: ntp_msg.c,v 1.18 2007/10/19 15:53:57 otto Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -40,8 +40,7 @@ ntp_getmsg(struct sockaddr *sa, char *p, ssize_t len, struct ntp_msg *msg)
 }
 
 int
-ntp_sendmsg(int fd, struct sockaddr *sa, struct ntp_msg *msg, ssize_t len,
-    int auth)
+ntp_sendmsg(int fd, struct sockaddr *sa, struct ntp_msg *msg)
 {
 	socklen_t	sa_len;
 	ssize_t		n;
