@@ -1,4 +1,4 @@
-/*	$OpenBSD: pty.c,v 1.17 2012/07/09 14:26:40 nicm Exp $	*/
+/*	$OpenBSD: pty.c,v 1.18 2012/12/05 23:20:06 deraadt Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -89,6 +89,8 @@ forkpty(int *amaster, char *name, struct termios *termp, struct winsize *winp)
 		return (-1);
 	switch (pid = fork()) {
 	case -1:
+		(void) close(master);
+		(void) close(slave);
 		return (-1);
 	case 0:
 		/*
