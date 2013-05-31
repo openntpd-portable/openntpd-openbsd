@@ -1,4 +1,4 @@
-/*	$OpenBSD: stdlib.h,v 1.50 2012/06/01 01:01:57 guenther Exp $	*/
+/*	$OpenBSD: stdlib.h,v 1.51 2012/12/03 20:08:33 millert Exp $	*/
 /*	$NetBSD: stdlib.h,v 1.25 1995/12/27 21:19:08 jtc Exp $	*/
 
 /*-
@@ -269,6 +269,10 @@ char	*devname(int, mode_t);
 int	 getloadavg(double [], int);
 
 void	 cfree(void *);
+
+const char *
+	getprogname(void);
+void	setprogname(const char *);
 
 #ifndef _GETOPT_DEFINED_
 #define _GETOPT_DEFINED_
