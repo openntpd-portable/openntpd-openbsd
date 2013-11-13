@@ -1,4 +1,4 @@
-/*	$OpenBSD: imsg-buffer.c,v 1.1 2010/05/26 16:44:32 nicm Exp $	*/
+/*	$OpenBSD: imsg-buffer.c,v 1.2 2012/06/02 21:46:53 gilles Exp $	*/
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -159,7 +159,7 @@ ibuf_write(struct msgbuf *msgbuf)
 
 again:
 	if ((n = writev(msgbuf->fd, iov, i)) == -1) {
-		if (errno == EAGAIN || errno == EINTR)
+		if (errno == EINTR)
 			goto again;
 		if (errno == ENOBUFS)
 			errno = EAGAIN;
@@ -259,7 +259,7 @@ msgbuf_write(struct msgbuf *msgbuf)
 
 again:
 	if ((n = sendmsg(msgbuf->fd, &msg, 0)) == -1) {
-		if (errno == EAGAIN || errno == EINTR)
+		if (errno == EINTR)
 			goto again;
 		if (errno == ENOBUFS)
 			errno = EAGAIN;
