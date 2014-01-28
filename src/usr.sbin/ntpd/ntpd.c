@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.76 2014/01/10 22:54:12 deraadt Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.77 2014/01/22 02:55:15 benno Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -687,7 +687,7 @@ ctl_lookup_option(char *cmd, const char **list)
 				if (item == NULL)
 					item = *list;
 				else
-					errx(1, "%s is ambigious", cmd);
+					errx(1, "%s is ambiguous", cmd);
 			}
 	return (item);
 }
