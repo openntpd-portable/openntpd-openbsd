@@ -246,7 +246,7 @@ ssize_t	 getdelim(char ** __restrict, size_t * __restrict, int,
 ssize_t	 getline(char ** __restrict, size_t * __restrict,
 	    FILE * __restrict);
 #endif
-
+char	*gets(char *);
 #if __BSD_VISIBLE && !defined(__SYS_ERRLIST)
 #define __SYS_ERRLIST
 
