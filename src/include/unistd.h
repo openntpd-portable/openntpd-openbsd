@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.82 2013/12/04 22:58:24 deraadt Exp $ */
+/*	$OpenBSD: unistd.h,v 1.83 2013/12/28 01:51:53 martynas Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -323,6 +323,11 @@
 #else
 #define	NULL	((void *)0)
 #endif
+#endif
+
+#ifndef	_INTPTR_T_DEFINED_
+#define	_INTPTR_T_DEFINED_
+typedef	__intptr_t		intptr_t;
 #endif
 
 __BEGIN_DECLS
