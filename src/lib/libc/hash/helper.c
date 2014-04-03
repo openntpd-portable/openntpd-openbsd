@@ -1,3 +1,5 @@
+/*	$OpenBSD$ */
+
 /*
  * Copyright (c) 2000 Poul-Henning Kamp <phk@FreeBSD.org>
  *
