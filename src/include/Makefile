@@ -31,7 +31,7 @@ MFILES=	frame.h
 LFILES=	fcntl.h syslog.h termios.h stdarg.h stdint.h varargs.h
 
 DIRS=	arpa protocols rpc rpcsvc
-LDIRS=	altq crypto ddb dev isofs miscfs msdosfs net netinet netinet6 \
+LDIRS=	crypto ddb dev isofs miscfs msdosfs net netinet netinet6 \
 	netmpls net80211 netbt nfs ntfs scsi sys ufs uvm
 
 # Places that need a prerequisite target met before includes
