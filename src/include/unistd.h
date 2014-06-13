@@ -1,4 +1,4 @@
-/*	$OpenBSD: unistd.h,v 1.85 2014/04/21 11:28:26 guenther Exp $ */
+/*	$OpenBSD: unistd.h,v 1.86 2014/05/16 21:28:15 tedu Exp $ */
 /*	$NetBSD: unistd.h,v 1.26.4.1 1996/05/28 02:31:51 mrg Exp $	*/
 
 /*-
@@ -538,6 +538,7 @@ void	 setusershell(void);
 int	 strtofflags(char **, u_int32_t *, u_int32_t *);
 int	 swapctl(int cmd, const void *arg, int misc);
 int	 syscall(int, ...);
+ssize_t	 getentropy(void *, size_t);
 pid_t	 __tfork_thread(const struct __tfork *, size_t, void (*)(void *),
 	    void *);
 #endif /* __BSD_VISIBLE */
