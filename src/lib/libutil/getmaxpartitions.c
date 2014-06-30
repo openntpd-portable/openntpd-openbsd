@@ -1,4 +1,4 @@
-/*	$OpenBSD: getmaxpartitions.c,v 1.6 2006/04/02 02:10:35 deraadt Exp $	*/
+/*	$OpenBSD: getmaxpartitions.c,v 1.7 2008/06/26 05:42:05 ray Exp $	*/
 /*	$NetBSD: getmaxpartitions.c,v 1.1 1996/05/16 07:03:31 thorpej Exp $	*/
 
 /*-
@@ -30,7 +30,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <sys/param.h>
+#include <sys/types.h>
 #include <sys/sysctl.h>
 
 #include "util.h"
