@@ -1,4 +1,4 @@
-/*	$OpenBSD: imsg-buffer.c,v 1.2 2012/06/02 21:46:53 gilles Exp $	*/
+/*	$OpenBSD: imsg-buffer.c,v 1.3 2013/11/13 20:40:24 benno Exp $	*/
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -16,11 +16,12 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <sys/param.h>
+#include <sys/types.h>
 #include <sys/queue.h>
 #include <sys/socket.h>
 #include <sys/uio.h>
 
+#include <limits.h>
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
