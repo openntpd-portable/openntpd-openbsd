@@ -1,4 +1,4 @@
-/*	$OpenBSD: readlabel.c,v 1.9 2004/09/18 19:24:14 deraadt Exp $	*/
+/*	$OpenBSD: readlabel.c,v 1.11 2010/11/15 15:11:31 jsing Exp $	*/
 
 /*
  * Copyright (c) 1996, Jason Downs.  All rights reserved.
@@ -25,7 +25,13 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/types.h>
+#include <sys/param.h>
+#include <sys/disk.h>
+#include <sys/dkio.h>
+#define DKTYPENAMES
+#include <sys/disklabel.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
 #include <stdio.h>
 #include <err.h>
 #include <errno.h>
@@ -33,13 +39,6 @@
 #include <paths.h>
 #include <string.h>
 #include <unistd.h>
-#include <sys/disk.h>
-#include <sys/dkio.h>
-#define DKTYPENAMES
-#include <sys/disklabel.h>
-#include <sys/ioctl.h>
-#include <sys/param.h>
-#include <sys/stat.h>
 
 #include "util.h"
 
