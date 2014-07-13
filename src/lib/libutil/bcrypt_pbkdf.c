@@ -1,4 +1,4 @@
-/* $OpenBSD: bcrypt_pbkdf.c,v 1.7 2014/04/08 14:20:01 tedu Exp $ */
+/* $OpenBSD: bcrypt_pbkdf.c,v 1.8 2014/06/30 00:26:22 deraadt Exp $ */
 /*
  * Copyright (c) 2013 Ted Unangst <tedu@openbsd.org>
  *
@@ -17,6 +17,7 @@
 
 #include <sys/param.h>
 
+#include <stdint.h>
 #include <stdlib.h>
 #include <blf.h>
 #include <sha2.h>
