@@ -1,4 +1,4 @@
-/*	$OpenBSD: rpc_msg.h,v 1.5 2006/02/06 16:51:50 jmc Exp $	*/
+/*	$OpenBSD: rpc_msg.h,v 1.6 2010/09/01 14:43:34 millert Exp $	*/
 /*	$NetBSD: rpc_msg.h,v 1.5 1995/04/29 05:28:00 cgd Exp $	*/
 
 /*
@@ -184,6 +184,9 @@ extern bool_t	xdr_callhdr(XDR *, struct rpc_msg *);
  * 	struct rpc_msg *rmsg;
  */
 extern bool_t	xdr_replymsg(XDR *, struct rpc_msg *);
+
+extern bool_t   xdr_accepted_reply(XDR *, struct accepted_reply *);
+extern bool_t   xdr_rejected_reply(XDR *, struct rejected_reply *);
 
 /*
  * Fills in the error part of a reply message.
