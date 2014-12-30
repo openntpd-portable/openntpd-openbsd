@@ -1,4 +1,4 @@
-/* $OpenBSD: bcrypt_pbkdf.c,v 1.8 2014/06/30 00:26:22 deraadt Exp $ */
+/* $OpenBSD: bcrypt_pbkdf.c,v 1.9 2014/07/13 21:21:25 tedu Exp $ */
 /*
  * Copyright (c) 2013 Ted Unangst <tedu@openbsd.org>
  *
@@ -147,7 +147,7 @@ bcrypt_pbkdf(const char *pass, size_t passlen, const uint8_t *salt, size_t saltl
 		}
 
 		/*
-		 * pbkdf2 deviation: ouput the key material non-linearly.
+		 * pbkdf2 deviation: output the key material non-linearly.
 		 */
 		amt = MIN(amt, keylen);
 		for (i = 0; i < amt; i++) {
