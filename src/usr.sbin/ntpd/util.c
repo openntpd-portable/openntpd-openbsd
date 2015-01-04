@@ -1,4 +1,4 @@
-/*	$OpenBSD: util.c,v 1.14 2011/09/21 15:41:30 phessler Exp $ */
+/*	$OpenBSD: util.c,v 1.15 2013/10/15 20:35:55 krw Exp $ */
 
 /*
  * Copyright (c) 2004 Alexander Guy <alexander.guy@andern.org>
@@ -16,9 +16,9 @@
  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <sys/time.h>
 #include <limits.h>
 #include <stdio.h>
+#include <time.h>
 
 #include "ntpd.h"
 

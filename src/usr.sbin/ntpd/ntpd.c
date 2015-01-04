@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.78 2014/01/28 22:57:37 sthen Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.79 2014/02/10 09:12:34 dtucker Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -30,6 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <unistd.h>
 #include <err.h>
 
