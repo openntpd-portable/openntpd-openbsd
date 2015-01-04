@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.110 2014/10/25 03:23:49 lteo Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.111 2014/11/03 20:15:30 bluhm Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -28,7 +28,6 @@
 #include <netdb.h>
 #include <pwd.h>
 #include <stdarg.h>
-#include <event.h>
 #include <poll.h>
 
 #include "ntp.h"
@@ -190,14 +189,6 @@ struct ntpd_conf {
 	u_int8_t					filters;
 };
 
-struct imsgev {
-	struct imsgbuf		 ibuf;
-	void			(*handler)(int, short, void *);
-	struct event		 ev;
-	void			*data;
-	short			 events;
-};
-
 struct ctl_show_status {
 	u_int		 peercnt;
 	u_int		 sensorcnt;
@@ -240,7 +231,6 @@ enum blockmodes {
 
 struct ctl_conn {
 	TAILQ_ENTRY(ctl_conn)	entry;
-	struct imsgev		iev;
 	struct imsgbuf		ibuf;
 };
 
