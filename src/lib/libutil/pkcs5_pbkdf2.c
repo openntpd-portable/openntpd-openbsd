@@ -1,4 +1,4 @@
-/*	$OpenBSD: pkcs5_pbkdf2.c,v 1.5 2014/01/18 07:12:04 jsing Exp $	*/
+/*	$OpenBSD: pkcs5_pbkdf2.c,v 1.6 2014/01/31 16:56:32 tedu Exp $	*/
 
 /*-
  * Copyright (c) 2008 Damien Bergamini <damien.bergamini@free.fr>
@@ -17,7 +17,6 @@
  */
 
 #include <sys/types.h>
-#include <sys/param.h>
 
 #include <string.h>
 #include <limits.h>
