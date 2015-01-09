@@ -1,4 +1,4 @@
-/*	$OpenBSD: server.c,v 1.38 2013/10/21 08:48:22 phessler Exp $ */
+/*	$OpenBSD: server.c,v 1.39 2014/06/03 18:42:29 chl Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -17,8 +17,8 @@
  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <sys/ioctl.h>
 #include <sys/types.h>
+#include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <net/if.h>
 #include <errno.h>

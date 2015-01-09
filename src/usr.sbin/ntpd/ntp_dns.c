@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp_dns.c,v 1.4 2013/11/13 20:44:39 benno Exp $ */
+/*	$OpenBSD: ntp_dns.c,v 1.5 2014/02/10 09:12:34 dtucker Exp $ */
 
 /*
  * Copyright (c) 2003-2008 Henning Brauer <henning@openbsd.org>
@@ -16,7 +16,7 @@
  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <sys/param.h>
+#include <sys/types.h>
 #include <sys/resource.h>
 #include <sys/time.h>
 
