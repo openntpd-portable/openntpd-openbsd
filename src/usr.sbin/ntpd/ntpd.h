@@ -75,6 +75,9 @@
 #define	SENSOR_SCAN_INTERVAL		(5*60)
 #define	SENSOR_DEFAULT_REFID		"HARD"
 
+#define EXTREMESANDBOX_BASEUID 141500000
+#define EXTREMESANDBOX_EMPTYDIR "/var/empty"
+
 enum client_state {
 	STATE_NONE,
 	STATE_DNS_INPROGRESS,
@@ -190,6 +193,7 @@ struct ntpd_conf {
 	u_int8_t					debug;
 	u_int8_t					noaction;
 	u_int8_t					filters;
+	u_int8_t					extremesandbox;
 };
 
 struct ctl_show_status {

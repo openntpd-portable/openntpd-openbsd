@@ -142,6 +142,9 @@ ntp_main(int pipe_prnt[2], int fd_ctl, struct ntpd_conf *nconf,
 	conf = nconf;
 	setup_listeners(se, conf, &listener_cnt);
 
+	if (pw->pw_uid == EXTREMESANDBOX_BASEUID || pw->pw_gid == EXTREMESANDBOX_BASEUID)
+		pw->pw_uid = pw->pw_gid = EXTREMESANDBOX_BASEUID + getpid();
+
 	if (setgroups(1, &pw->pw_gid) ||
 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
