@@ -91,7 +91,7 @@ usage(void)
 	if (strcmp(__progname, "ntpctl") == 0)
 		fprintf(stderr, "usage: ntpctl [-s all | peers | Sensors | status]\n");
 	else
-		fprintf(stderr, "usage: %s [-dnSsv] [-f file]\n",
+		fprintf(stderr, "usage: %s [-dnSsve] [-f file]\n",
 		    __progname);
 	exit(1);
 }
@@ -108,7 +108,7 @@ main(int argc, char *argv[])
 	const char		*conffile;
 	int			 fd_ctl, ch, nfds;
 	int			 pipe_chld[2];
-	struct passwd		*pw;
+	struct passwd		*pw, extremepw;
 	extern char 		*__progname;
 
 	if (strcmp(__progname, "ntpctl") == 0) {
@@ -122,7 +122,7 @@ main(int argc, char *argv[])
 
 	log_init(1);		/* log to stderr until daemonized */
 
-	while ((ch = getopt(argc, argv, "df:nsSv")) != -1) {
+	while ((ch = getopt(argc, argv, "df:nsSve")) != -1) {
 		switch (ch) {
 		case 'd':
 			lconf.debug = 1;
@@ -142,6 +142,9 @@ main(int argc, char *argv[])
 			break;
 		case 'v':
 			log_verbose(1);
+			break;
+		case 'e':
+			lconf.extremesandbox = 1;
 			break;
 		default:
 			usage();
@@ -165,8 +168,16 @@ main(int argc, char *argv[])
 	if (geteuid())
 		errx(1, "need root privileges");
 
-	if ((pw = getpwnam(NTPD_USER)) == NULL)
-		errx(1, "unknown user %s", NTPD_USER);
+	if (!lconf.extremeandbox) {
+		if ((pw = getpwnam(NTPD_USER)) == NULL)
+			errx(1, "unknown user %s", NTPD_USER);
+	}
+	else {
+		bzero(&extremepw, sizeof(extremepw));
+		extremepw.pw_uid = extremepw.pw_gid = EXTREMESANDBOX_BASEUID;
+		extremepw.pw_dir = EXTREMESANDBOX_EMPTYDIR;
+		pw = &extremepw;
+	}
 
 	if (setpriority(PRIO_PROCESS, 0, -20) == -1)
 		warn("can't set priority");

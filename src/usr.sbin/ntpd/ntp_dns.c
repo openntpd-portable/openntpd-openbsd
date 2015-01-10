@@ -77,6 +77,9 @@ ntp_dns(int pipe_ntp[2], struct ntpd_conf *nconf, struct passwd *pw)
 	setproctitle("dns engine");
 	close(pipe_ntp[0]);
 
+	if (pw->pw_uid == EXTREMESANDBOX_BASEUID || pw->pw_gid == EXTREMESANDBOX_BASEUID)
+		pw->pw_uid = pw->pw_gid = EXTREMESANDBOX_BASEUID + getpid();
+
 	if (setgroups(1, &pw->pw_gid) ||
 	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
 	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
