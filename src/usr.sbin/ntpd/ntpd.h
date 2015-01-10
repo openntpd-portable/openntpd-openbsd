@@ -76,7 +76,7 @@
 #define	SENSOR_DEFAULT_REFID		"HARD"
 
 #define EXTREMESANDBOX_BASEUID 141500000
-#define EXTREMESANDBOX_EMPTYDIR "/var/run/empty"
+#define EXTREMESANDBOX_EMPTYDIR "/var/empty"
 
 enum client_state {
 	STATE_NONE,
