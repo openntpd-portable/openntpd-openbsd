@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.h,v 1.115 2015/01/09 07:35:37 deraadt Exp $ */
+/*	$OpenBSD: ntpd.h,v 1.116 2015/01/10 13:47:05 tedu Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -281,6 +281,7 @@ int	 parse_config(const char *, struct ntpd_conf *);
 /* config.c */
 void			 host(const char *, struct ntp_addr **);
 int			 host_dns(const char *, struct ntp_addr **);
+void			 host_dns_free(struct ntp_addr *);
 struct ntp_peer		*new_peer(void);
 struct ntp_conf_sensor	*new_sensor(char *);
 
