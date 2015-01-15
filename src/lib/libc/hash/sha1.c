@@ -1,4 +1,4 @@
-/*	$OpenBSD: sha1.c,v 1.22 2012/08/27 21:05:43 miod Exp $	*/
+/*	$OpenBSD: sha1.c,v 1.23 2014/01/08 06:14:57 tedu Exp $	*/
 
 /*
  * SHA-1 in C
@@ -169,5 +169,5 @@ SHA1Final(u_int8_t digest[SHA1_DIGEST_LENGTH], SHA1_CTX *context)
 		digest[i] = (u_int8_t)
 		   ((context->state[i>>2] >> ((3-(i & 3)) * 8) ) & 255);
 	}
-	memset(context, 0, sizeof(*context));
+	explicit_bzero(context, sizeof(*context));
 }
