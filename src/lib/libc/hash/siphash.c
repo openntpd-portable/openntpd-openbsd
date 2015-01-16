@@ -1,4 +1,4 @@
-/*	$OpenBSD: siphash.c,v 1.1 2014/11/04 03:01:14 dlg Exp $ */
+/*	$OpenBSD: siphash.c,v 1.1 2014/12/08 20:37:11 tedu Exp $ */
 
 /*-
  * Copyright (c) 2013 Andre Oppermann <andre@FreeBSD.org>
@@ -43,7 +43,7 @@
  * https://131002.net/siphash/
  */
 
-#include <sys/param.h>
+#include <sys/types.h>
 #include <sys/endian.h>
 
 #include <string.h>
