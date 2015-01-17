@@ -596,7 +596,7 @@ ctl_main(int argc, char *argv[])
 		err(1, "connect: %s", sockname);
 
 	if ((ibuf_ctl = malloc(sizeof(struct imsgbuf))) == NULL)
-		err(1, NULL);
+		err(1, "malloc: ");
 	imsg_init(ibuf_ctl, fd);
 
 	switch (action) {
