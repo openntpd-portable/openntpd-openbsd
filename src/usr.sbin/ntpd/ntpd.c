@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.85 2015/01/13 14:52:47 bcook Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.86 2015/01/14 21:14:27 naddy Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -578,12 +578,11 @@ ctl_main(int argc, char *argv[])
 		case 'a':
 			action = CTL_SHOW_ALL;
 			break;
-		default:
-			usage();
-			/* NOTREACHED */
 		}
-	} else
+	}
+	if (action == -1) 
 		usage();
+		/* NOTREACHED */
 
 	if ((fd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1)
 		err(1, "ntpctl: socket");
