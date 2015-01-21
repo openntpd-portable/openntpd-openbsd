@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntp_dns.c,v 1.6 2015/01/09 07:35:37 deraadt Exp $ */
+/*	$OpenBSD: ntp_dns.c,v 1.7 2015/01/13 02:28:56 bcook Exp $ */
 
 /*
  * Copyright (c) 2003-2008 Henning Brauer <henning@openbsd.org>
@@ -167,12 +167,12 @@ dns_dispatch_imsg(void)
 							buf = NULL;
 							break;
 						}
-					if (buf)
-						imsg_close(ibuf_dns, buf);
 				}
 				host_dns_free(hn);
 				hn = NULL;
 			}
+			if (buf)
+				imsg_close(ibuf_dns, buf);
 			break;
 		default:
 			break;
