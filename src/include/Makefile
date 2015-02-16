@@ -1,4 +1,4 @@
-#	$OpenBSD: Makefile,v 1.197 2014/12/08 20:39:56 tedu Exp $
+#	$OpenBSD: Makefile,v 1.198 2015/01/17 20:37:04 tedu Exp $
 #	$NetBSD: Makefile,v 1.59 1996/05/15 21:36:43 jtc Exp $
 
 #	@(#)Makefile	5.45.1.1 (Berkeley) 5/6/91
@@ -89,10 +89,6 @@ includes:
 			${INSTALL} ${INSTALL_COPY} -m 444 $$j ${DESTDIR}/usr/include/$$i/$$j; \
 		done; \
 	done
-	@rm -rf ${DESTDIR}/usr/include/openssl ${DESTDIR}/usr/include/ssl \
-		${DESTDIR}/usr/libdata/perl5/site_perl/${MACHINE_CPU}-openbsd/ssl \
-		${DESTDIR}/usr/libdata/perl5/site_perl/${MACHINE_CPU}-openbsd/openssl
-	@mkdir ${DESTDIR}/usr/include/openssl
 	@ln -sf openssl ${DESTDIR}/usr/include/ssl
 	@echo installing ${LFILES}
 	@for i in ${LFILES}; do \
