@@ -258,7 +258,7 @@ client_dispatch(struct ntp_peer *p, u_int8_t settime)
 		if (cmsg->cmsg_level == SOL_SOCKET &&
 		    cmsg->cmsg_type == SCM_TIMESTAMP) {
 			memcpy(&tv, CMSG_DATA(cmsg), sizeof(tv));
-			T4 += tv.tv_sec + JAN_1970 + 1.0e-6 * tv.tv_usec;
+			T4 += (double)tv.tv_sec + JAN_1970 + 1.0e-6 * tv.tv_usec;
 			break;
 		}
 	}
