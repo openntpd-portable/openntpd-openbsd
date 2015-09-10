@@ -1,4 +1,4 @@
-/*	$OpenBSD: netgroup.h,v 1.7 2015/01/19 15:30:52 krw Exp $ */
+/*	$OpenBSD: netgroup.h,v 1.8 2015/09/10 18:59:34 deraadt Exp $ */
 /*
  * Copyright (c) 1994 Christos Zoulas
  * All rights reserved.
@@ -62,18 +62,6 @@ void	setnetgrent(const char *);
 int	getnetgrent(const char **, const char **, const char **);
 void	endnetgrent(void);
 int	innetgr(const char *, const char *, const char *, const char *);
-#ifdef _NETGROUP_PRIVATE
-struct stringlist;
-
-struct stringlist *_ng_sl_init(void);
-int	_ng_sl_add(struct stringlist *, char *);
-void	_ng_sl_free(struct stringlist *, int);
-char    *_ng_sl_find(struct stringlist *, char *);
-char    *_ng_makekey(const char *, const char *, size_t);
-int	_ng_parse(char **, char **, struct netgroup **);
-void	_ng_print(char *, size_t, const struct netgroup *);
-#endif /* _NETGROUP_PRIVATE */
-
 __END_DECLS
 
 #endif /* !_NETGROUP_H_ */
