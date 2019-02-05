@@ -225,6 +225,7 @@ struct ntpd_conf {
 	u_int32_t					scale;
 	int				        	debug;
 	int				        	verbose;
+	int						nofork;
 	u_int8_t					listen_all;
 	u_int8_t					settime;
 	u_int8_t					noaction;

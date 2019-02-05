@@ -97,7 +97,7 @@ usage(void)
 		fprintf(stderr,
 		    "usage: ntpctl -s all | peers | Sensors | status\n");
 	else
-		fprintf(stderr, "usage: %s [-dnSsv] [-f file]\n",
+		fprintf(stderr, "usage: %s [-dnNSsv] [-f file]\n",
 		    __progname);
 	exit(1);
 }
@@ -133,10 +133,11 @@ main(int argc, char *argv[])
 
 	memset(&lconf, 0, sizeof(lconf));
 
-	while ((ch = getopt(argc, argv, "df:nP:sSv")) != -1) {
+	while ((ch = getopt(argc, argv, "df:nNP:sSv")) != -1) {
 		switch (ch) {
 		case 'd':
 			lconf.debug = 2;
+			lconf.nofork = 1;
 			break;
 		case 'f':
 			conffile = optarg;
@@ -144,6 +145,9 @@ main(int argc, char *argv[])
 		case 'n':
 			lconf.debug = 2;
 			lconf.noaction = 1;
+			break;
+		case 'N':
+			lconf.nofork = 1;
 			break;
 		case 'P':
 			pname = optarg;
@@ -214,7 +218,7 @@ main(int argc, char *argv[])
 	if (!lconf.settime) {
 		log_init(lconf.debug, LOG_DAEMON);
 		log_setverbose(lconf.verbose);
-		if (!lconf.debug)
+		if (!lconf.nofork)
 			if (daemon(1, 0))
 				fatal("daemon");
 	} else
@@ -298,7 +302,7 @@ main(int argc, char *argv[])
 			log_setverbose(lconf.verbose);
 			log_warnx("no reply received in time, skipping initial "
 			    "time setting");
-			if (!lconf.debug)
+			if (!lconf.nofork)
 				if (daemon(1, 0))
 					fatal("daemon");
 		}
@@ -399,7 +403,7 @@ dispatch_imsg(struct ntpd_conf *lconf, int argc, char **argv)
 			memcpy(&d, imsg.data, sizeof(d));
 			ntpd_settime(d);
 			/* daemonize now */
-			if (!lconf->debug)
+			if (!lconf->nofork)
 				if (daemon(1, 0))
 					fatal("daemon");
 			lconf->settime = 0;

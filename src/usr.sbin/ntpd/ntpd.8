@@ -59,6 +59,12 @@ instead of the default
 .It Fl n
 Configtest mode.
 Only check the configuration file for validity.
+.It Fl N
+Do not fork.
+If this option is specified,
+.Nm
+will run in the foreground but still log to
+.Em syslog .
 .It Fl S
 Do not set the time immediately at startup.
 This is the default.
