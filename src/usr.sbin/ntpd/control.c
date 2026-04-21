@@ -1,4 +1,4 @@
-/*	$OpenBSD: control.c,v 1.27 2024/11/21 13:38:14 claudio Exp $ */
+/*	$OpenBSD: control.c,v 1.28 2026/04/21 14:20:00 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -39,19 +39,19 @@
 int
 control_check(char *path)
 {
-	struct sockaddr_un	 sun;
+	struct sockaddr_un	 sa;
 	int			 fd;
 
-	bzero(&sun, sizeof(sun));
-	sun.sun_family = AF_UNIX;
-	strlcpy(sun.sun_path, path, sizeof(sun.sun_path));
+	bzero(&sa, sizeof(sa));
+	sa.sun_family = AF_UNIX;
+	strlcpy(sa.sun_path, path, sizeof(sa.sun_path));
 
 	if ((fd = socket(AF_UNIX, SOCK_STREAM, 0)) == -1) {
 		log_debug("control_check: socket check");
 		return (-1);
 	}
 
-	if (connect(fd, (struct sockaddr *)&sun, sizeof(sun)) == 0) {
+	if (connect(fd, (struct sockaddr *)&sa, sizeof(sa)) == 0) {
 		log_debug("control_check: socket in use");
 		close(fd);
 		return (-1);
