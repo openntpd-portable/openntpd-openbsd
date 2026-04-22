@@ -1,4 +1,4 @@
-/*	$OpenBSD: ntpd.c,v 1.144 2026/04/21 14:36:00 henning Exp $ */
+/*	$OpenBSD: ntpd.c,v 1.145 2026/04/22 13:54:50 henning Exp $ */
 
 /*
  * Copyright (c) 2003, 2004 Henning Brauer <henning@openbsd.org>
@@ -839,7 +839,7 @@ show_peer_msg(struct imsg *imsg, int calledfromshowall)
 {
 	struct ctl_show_peer	*cpeer;
 	int			 cnt;
-	char			 stratum[3];
+	char			 stratum[4];
 	static int		 firsttime = 1;
 
 	if (imsg->hdr.type == IMSG_CTL_SHOW_PEERS_END) {
