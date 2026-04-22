@@ -1,4 +1,4 @@
-/*	$OpenBSD: util.c,v 1.29 2025/08/20 10:40:21 henning Exp $ */
+/*	$OpenBSD: util.c,v 1.30 2026/04/22 13:57:58 henning Exp $ */
 
 /*
  * Copyright (c) 2004 Alexander Guy <alexander.guy@andern.org>
@@ -149,7 +149,7 @@ d_to_sfp(double d)
 char *
 print_rtable(int r)
 {
-	static char b[11];
+	static char b[19];
 
 	b[0] = 0;
 	if (r > 0)
